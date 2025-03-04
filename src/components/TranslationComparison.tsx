@@ -9,6 +9,7 @@ interface TranslationExample {
   aiTranslation: string;
   machineTranslation: string;
   targetLanguage: string;
+  englishMeaning?: string; // Optional field for English speakers who don't know the target language
 }
 
 const examples: TranslationExample[] = [
@@ -18,7 +19,8 @@ const examples: TranslationExample[] = [
     language: "English",
     aiTranslation: "Сегодня прекрасная погода, я думаю, нам стоит прогуляться в парке.",
     machineTranslation: "Погода сегодня прекрасная, я думаю, мы должны пойти на прогулку в парк.",
-    targetLanguage: "Russian"
+    targetLanguage: "Russian",
+    englishMeaning: "Today the weather is beautiful, I think we should go for a walk in the park."
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const examples: TranslationExample[] = [
     language: "English",
     aiTranslation: "Cette film était absolument incroyable. Le développement des personnages et les rebondissements m'ont tenu en haleine.",
     machineTranslation: "Ce film était absolument incroyable. Le développement du personnage et les rebondissements de l'intrigue m'ont tenu en haleine.",
-    targetLanguage: "French"
+    targetLanguage: "French",
+    englishMeaning: "This movie was absolutely incredible. The character development and plot twists kept me on the edge of my seat."
   },
   {
     id: 3,
@@ -34,7 +37,17 @@ const examples: TranslationExample[] = [
     language: "English",
     aiTranslation: "Ich kann nicht glauben, wie sehr sich die Technologie im letzten Jahrzehnt verändert hat. Es ist wirklich bemerkenswert.",
     machineTranslation: "Ich kann nicht glauben, wie viel sich die Technologie im letzten Jahrzehnt verändert hat. Es ist wirklich bemerkenswert.",
-    targetLanguage: "German"
+    targetLanguage: "German",
+    englishMeaning: "I can't believe how much technology has changed in the last decade. It's truly remarkable."
+  },
+  {
+    id: 4,
+    originalText: "Learning a new language opens up a world of opportunities and helps you connect with different cultures.",
+    language: "English",
+    aiTranslation: "学习一门新语言开启了一个充满机遇的世界，帮助你与不同文化建立联系。",
+    machineTranslation: "学习新语言为您打开了一个充满机遇的世界，并帮助您与不同的文化联系。",
+    targetLanguage: "Chinese",
+    englishMeaning: "Learning a new language opens up a world of opportunities and helps you connect with different cultures."
   }
 ];
 
@@ -107,6 +120,11 @@ const TranslationComparison = () => {
             
             <div className="p-4 bg-white/5 border border-blue-500/20 rounded-md">
               <p className="text-white/90">{activeExample.aiTranslation}</p>
+              {activeExample.englishMeaning && (
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="text-xs text-white/60 italic">English meaning: {activeExample.englishMeaning}</p>
+                </div>
+              )}
             </div>
           </div>
           
@@ -121,6 +139,11 @@ const TranslationComparison = () => {
             
             <div className="p-4 bg-white/5 border border-white/10 rounded-md">
               <p className="text-white/90">{activeExample.machineTranslation}</p>
+              {activeExample.englishMeaning && (
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="text-xs text-white/60 italic">English meaning: {activeExample.englishMeaning}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
