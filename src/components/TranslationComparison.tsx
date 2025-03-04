@@ -16,53 +16,53 @@ interface TranslationExample {
 const examples: TranslationExample[] = [
   {
     id: 1,
-    originalText: "It's raining cats and dogs outside, we should probably cancel our picnic.",
+    originalText: "The fisherman couldn't decide whether to go to sea, so he remained in a state of pier pressure.",
     language: "English",
-    aiTranslation: "Идет сильный дождь, нам, наверное, стоит отменить пикник.",
-    machineTranslation: "На улице дождь кошек и собак, нам, наверное, стоит отменить наш пикник.",
-    targetLanguage: "Russian",
-    englishMeaning: "It's raining heavily outside, we should probably cancel our picnic.",
-    context: "Idiomatic expression: 'raining cats and dogs' means heavy rainfall, not literal animals falling"
+    aiTranslation: "El pescador no podía decidir si ir al mar, así que se quedó en un estado de indecisión.",
+    machineTranslation: "El pescador no podía decidir si ir al mar, así que permaneció en un estado de presión de muelle.",
+    targetLanguage: "Spanish",
+    englishMeaning: "The fisherman couldn't decide whether to go to sea, so he remained indecisive.",
+    context: "English pun: 'pier pressure' sounds like 'peer pressure' but refers to a fishing dock (pier)"
   },
   {
     id: 2,
-    originalText: "Break a leg for your performance tonight! I know you'll knock it out of the park.",
+    originalText: "I'll burn that bridge when I get to it.",
     language: "English",
-    aiTranslation: "Bonne chance pour ton spectacle ce soir ! Je sais que tu vas cartonner.",
-    machineTranslation: "Casse-toi une jambe pour ta performance ce soir ! Je sais que tu vas la faire sortir du parc.",
-    targetLanguage: "French",
-    englishMeaning: "Good luck for your performance tonight! I know you'll do amazingly well.",
-    context: "Theatre slang: 'Break a leg' means 'good luck' and 'knock it out of the park' means to do exceptionally well"
+    aiTranslation: "Me ocuparé de ese problema cuando llegue el momento.",
+    machineTranslation: "Quemaré ese puente cuando llegue a él.",
+    targetLanguage: "Spanish",
+    englishMeaning: "I'll deal with that problem when the time comes.",
+    context: "Idiom mix-up: Combines 'burn bridges' and 'cross that bridge when I get to it' - AI understands the intended meaning"
   },
   {
     id: 3,
-    originalText: "The early bird catches the worm, so let's meet at 6am to beat the traffic.",
+    originalText: "Time flies like an arrow; fruit flies like a banana.",
     language: "English",
-    aiTranslation: "Wer zuerst kommt, mahlt zuerst, also lass uns um 6 Uhr treffen, um dem Verkehr zuvorzukommen.",
-    machineTranslation: "Der frühe Vogel fängt den Wurm, also treffen wir uns um 6 Uhr, um den Verkehr zu schlagen.",
-    targetLanguage: "German",
-    englishMeaning: "The early bird catches the worm, so let's meet at 6am to beat the traffic.",
-    context: "Proverb: The AI uses the German equivalent proverb 'First come, first served' instead of literal translation"
+    aiTranslation: "時間は矢のように飛ぶ。果実バエはバナナが好きだ。",
+    machineTranslation: "時間はarrow のように飛ぶ。果物はバナナのように飛ぶ。",
+    targetLanguage: "Japanese",
+    englishMeaning: "Time passes quickly like an arrow; fruit flies (the insects) are attracted to bananas.",
+    context: "Linguistic ambiguity: 'flies' is used as a verb then as a noun, and 'like' as an adverb then as a verb"
   },
   {
     id: 4,
-    originalText: "That movie was so bad, it made Battlefield Earth look like The Godfather.",
+    originalText: "Did you hear about the new restaurant on the moon? Great food, but no atmosphere.",
     language: "English",
-    aiTranslation: "那部电影太糟糕了，比起它，《地球战场》简直就像《教父》一样经典。",
-    machineTranslation: "那部电影太糟糕了，它使《地球战场》看起来像《教父》。",
+    aiTranslation: "听说月球上新开了一家餐厅吗？食物很棒，但没有氛围。这是个双关语，因为月球上真的没有大气层。",
+    machineTranslation: "你听说过月球上的新餐厅吗？食物很好，但没有氛围。",
     targetLanguage: "Chinese",
-    englishMeaning: "That movie was so bad, it made Battlefield Earth look like The Godfather.",
-    context: "Cultural reference: Comparing a bad movie to 'Battlefield Earth' (famously terrible) versus 'The Godfather' (critically acclaimed)"
+    englishMeaning: "Did you hear about the new restaurant on the moon? Great food, but no atmosphere.",
+    context: "Scientific pun: 'atmosphere' refers both to restaurant ambiance and the moon's lack of actual atmosphere"
   },
   {
     id: 5,
-    originalText: "I'm feeling under the weather today, so I'll work from home.",
+    originalText: "Bob's your uncle! We'll have this fixed in no time.",
     language: "English",
-    aiTranslation: "今日は体調が優れないので、家から仕事をします。",
-    machineTranslation: "今日は天気の下で感じているので、家から仕事します。",
-    targetLanguage: "Japanese",
-    englishMeaning: "I'm feeling sick today, so I'll work from home.",
-    context: "Idiomatic expression: 'under the weather' means feeling ill or sick"
+    aiTranslation: "Проще простого! Мы исправим это в два счета.",
+    machineTranslation: "Боб твой дядя! Мы исправим это в кратчайшие сроки.",
+    targetLanguage: "Russian",
+    englishMeaning: "There you go! We'll have this fixed in no time.",
+    context: "British idiom: 'Bob's your uncle' means 'there you have it' or 'it's done' - has no connection to anyone named Bob"
   }
 ];
 
