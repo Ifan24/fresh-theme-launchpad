@@ -9,45 +9,60 @@ interface TranslationExample {
   aiTranslation: string;
   machineTranslation: string;
   targetLanguage: string;
-  englishMeaning?: string; // Optional field for English speakers who don't know the target language
+  englishMeaning?: string;
+  context?: string; // Adding context to explain cultural references/puns
 }
 
 const examples: TranslationExample[] = [
   {
     id: 1,
-    originalText: "The weather is beautiful today, I think we should go for a walk in the park.",
+    originalText: "It's raining cats and dogs outside, we should probably cancel our picnic.",
     language: "English",
-    aiTranslation: "Сегодня прекрасная погода, я думаю, нам стоит прогуляться в парке.",
-    machineTranslation: "Погода сегодня прекрасная, я думаю, мы должны пойти на прогулку в парк.",
+    aiTranslation: "Идет сильный дождь, нам, наверное, стоит отменить пикник.",
+    machineTranslation: "На улице дождь кошек и собак, нам, наверное, стоит отменить наш пикник.",
     targetLanguage: "Russian",
-    englishMeaning: "Today the weather is beautiful, I think we should go for a walk in the park."
+    englishMeaning: "It's raining heavily outside, we should probably cancel our picnic.",
+    context: "Idiomatic expression: 'raining cats and dogs' means heavy rainfall, not literal animals falling"
   },
   {
     id: 2,
-    originalText: "This movie was absolutely incredible. The character development and plot twists kept me on the edge of my seat.",
+    originalText: "Break a leg for your performance tonight! I know you'll knock it out of the park.",
     language: "English",
-    aiTranslation: "Cette film était absolument incroyable. Le développement des personnages et les rebondissements m'ont tenu en haleine.",
-    machineTranslation: "Ce film était absolument incroyable. Le développement du personnage et les rebondissements de l'intrigue m'ont tenu en haleine.",
+    aiTranslation: "Bonne chance pour ton spectacle ce soir ! Je sais que tu vas cartonner.",
+    machineTranslation: "Casse-toi une jambe pour ta performance ce soir ! Je sais que tu vas la faire sortir du parc.",
     targetLanguage: "French",
-    englishMeaning: "This movie was absolutely incredible. The character development and plot twists kept me on the edge of my seat."
+    englishMeaning: "Good luck for your performance tonight! I know you'll do amazingly well.",
+    context: "Theatre slang: 'Break a leg' means 'good luck' and 'knock it out of the park' means to do exceptionally well"
   },
   {
     id: 3,
-    originalText: "I can't believe how much technology has changed in the last decade. It's truly remarkable.",
+    originalText: "The early bird catches the worm, so let's meet at 6am to beat the traffic.",
     language: "English",
-    aiTranslation: "Ich kann nicht glauben, wie sehr sich die Technologie im letzten Jahrzehnt verändert hat. Es ist wirklich bemerkenswert.",
-    machineTranslation: "Ich kann nicht glauben, wie viel sich die Technologie im letzten Jahrzehnt verändert hat. Es ist wirklich bemerkenswert.",
+    aiTranslation: "Wer zuerst kommt, mahlt zuerst, also lass uns um 6 Uhr treffen, um dem Verkehr zuvorzukommen.",
+    machineTranslation: "Der frühe Vogel fängt den Wurm, also treffen wir uns um 6 Uhr, um den Verkehr zu schlagen.",
     targetLanguage: "German",
-    englishMeaning: "I can't believe how much technology has changed in the last decade. It's truly remarkable."
+    englishMeaning: "The early bird catches the worm, so let's meet at 6am to beat the traffic.",
+    context: "Proverb: The AI uses the German equivalent proverb 'First come, first served' instead of literal translation"
   },
   {
     id: 4,
-    originalText: "Learning a new language opens up a world of opportunities and helps you connect with different cultures.",
+    originalText: "That movie was so bad, it made Battlefield Earth look like The Godfather.",
     language: "English",
-    aiTranslation: "学习一门新语言开启了一个充满机遇的世界，帮助你与不同文化建立联系。",
-    machineTranslation: "学习新语言为您打开了一个充满机遇的世界，并帮助您与不同的文化联系。",
+    aiTranslation: "那部电影太糟糕了，比起它，《地球战场》简直就像《教父》一样经典。",
+    machineTranslation: "那部电影太糟糕了，它使《地球战场》看起来像《教父》。",
     targetLanguage: "Chinese",
-    englishMeaning: "Learning a new language opens up a world of opportunities and helps you connect with different cultures."
+    englishMeaning: "That movie was so bad, it made Battlefield Earth look like The Godfather.",
+    context: "Cultural reference: Comparing a bad movie to 'Battlefield Earth' (famously terrible) versus 'The Godfather' (critically acclaimed)"
+  },
+  {
+    id: 5,
+    originalText: "I'm feeling under the weather today, so I'll work from home.",
+    language: "English",
+    aiTranslation: "今日は体調が優れないので、家から仕事をします。",
+    machineTranslation: "今日は天気の下で感じているので、家から仕事します。",
+    targetLanguage: "Japanese",
+    englishMeaning: "I'm feeling sick today, so I'll work from home.",
+    context: "Idiomatic expression: 'under the weather' means feeling ill or sick"
   }
 ];
 
@@ -70,25 +85,32 @@ const TranslationComparison = () => {
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-md border border-white/10 hover:bg-white/20 transition-all duration-200"
           >
-            <span>Example {activeExample.id}</span>
+            <span>Example {activeExample.id} - {activeExample.targetLanguage}</span>
             <ChevronDown className="w-4 h-4" />
           </button>
           
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-black/80 backdrop-blur-lg border border-white/10 rounded-md shadow-lg z-10">
+            <div className="absolute right-0 mt-2 w-72 bg-black/80 backdrop-blur-lg border border-white/10 rounded-md shadow-lg z-10">
               {examples.map((example) => (
                 <button
                   key={example.id}
                   className="w-full text-left px-4 py-2 hover:bg-white/10 transition-colors"
                   onClick={() => handleExampleChange(example)}
                 >
-                  Example {example.id} - {example.targetLanguage}
+                  <div>Example {example.id} - {example.targetLanguage}</div>
+                  <div className="text-xs text-white/60 truncate">{example.context}</div>
                 </button>
               ))}
             </div>
           )}
         </div>
       </div>
+      
+      {activeExample.context && (
+        <div className="mb-6 p-3 bg-blue-500/10 border border-blue-500/20 rounded-md">
+          <p className="text-sm text-white/80"><span className="font-semibold">Context:</span> {activeExample.context}</p>
+        </div>
+      )}
       
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-4">
@@ -151,7 +173,7 @@ const TranslationComparison = () => {
       
       <div className="mt-6 text-center">
         <p className="text-sm text-white/70">
-          GPT Subtitler produces more natural, context-aware translations that preserve the original tone and meaning.
+          GPT Subtitler excels at translating idioms, cultural references, and complex expressions that trip up conventional machine translation.
         </p>
       </div>
     </div>
