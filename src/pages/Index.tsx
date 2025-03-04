@@ -1,12 +1,13 @@
 
 import { useRef, useEffect } from "react";
-import { ArrowRight, Check, FileText, Download, Play, Languages, Settings, AlertCircle } from "lucide-react";
+import { ArrowRight, Check, FileText, Download, Play, Languages, Settings, AlertCircle, Columns3 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FeatureCard from "@/components/FeatureCard";
 import StepCard from "@/components/StepCard";
 import ProviderLogo from "@/components/ProviderLogo";
 import CTAButton from "@/components/CTAButton";
 import FAQ from "@/components/FAQ";
+import TranslationComparison from "@/components/TranslationComparison";
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -114,7 +115,7 @@ const Index = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto opacity-0 animate-fade-up">
-              GPT-Powered Subtitling: Fast, Accurate, Effortless. 
+              AI-Powered Subtitling: Fast, Accurate, Effortless. 
               Translate subtitles in seconds with cutting-edge AI technology.
             </p>
             
@@ -131,49 +132,24 @@ const Index = () => {
                 variant="secondary" 
                 size="lg"
               >
-                Watch Demo
+                Learn More
               </CTAButton>
-            </div>
-            
-            <div className="mt-6 mb-12 opacity-0 animate-fade-up">
-              <div className="flex items-center justify-center">
-                <div className="relative w-full max-w-4xl aspect-video rounded-lg overflow-hidden glass-card">
-                  {/* Replace with actual screenshot or demo */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300 border border-white/30">
-                      <Play className="w-6 h-6 text-white ml-1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-sm text-white/60 flex items-center justify-center gap-2 opacity-0 animate-fade-up">
-              <Check className="w-4 h-4 text-blue-400" />
-              <span>Claim your 100,000 free tokens and kick off your translation success.</span>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Providers Section */}
+      {/* Comparison Section */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-xl font-medium text-white/80 mb-2">Supported LLM Providers</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
+            <h2 className="text-3xl font-bold mb-4">AI Translation Showcase</h2>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              See how our AI-powered translations compare to generic machine translations.
+            </p>
           </div>
           
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
-            {providers.map((provider, index) => (
-              <ProviderLogo 
-                key={provider} 
-                name={provider} 
-                delay={0.1 + index * 0.1} 
-              />
-            ))}
-          </div>
+          <TranslationComparison />
         </div>
       </section>
       
@@ -194,6 +170,26 @@ const Index = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Providers Section */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-on-scroll opacity-0">
+            <h2 className="text-xl font-medium text-white/80 mb-2">Supported LLM Providers</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+            {providers.map((provider, index) => (
+              <ProviderLogo 
+                key={provider} 
+                name={provider} 
+                delay={0.1 + index * 0.1} 
               />
             ))}
           </div>
