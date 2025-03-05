@@ -6,16 +6,17 @@ import { Switch } from '@/components/ui/switch';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <div className="flex items-center gap-2">
-      <Sun size={16} className="text-white/80 dark:text-white/80" />
+      <Sun size={16} className={`${isDark ? 'text-white/60' : 'text-yellow-500'}`} />
       <Switch
-        checked={theme === 'dark'}
+        checked={isDark}
         onCheckedChange={toggleTheme}
-        className="data-[state=checked]:bg-white/10 data-[state=unchecked]:bg-black/10"
+        className={`${isDark ? 'data-[state=checked]:bg-white/10' : 'data-[state=unchecked]:bg-black/10'}`}
       />
-      <Moon size={16} className="text-white/80 dark:text-white/80" />
+      <Moon size={16} className={`${isDark ? 'text-white/90' : 'text-gray-400'}`} />
     </div>
   );
 };

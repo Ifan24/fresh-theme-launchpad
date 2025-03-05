@@ -26,11 +26,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     // Update the document class when theme changes
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.remove('dark', 'light');
+    document.documentElement.classList.add(theme);
     
     // Save preference to localStorage
     localStorage.setItem('theme', theme);
