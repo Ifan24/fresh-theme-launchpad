@@ -145,4 +145,21 @@
   .stagger-animation > *:nth-child(6) {
     animation-delay: 0.6s;
   }
+  
+  /* Add these light mode specific classes */
+  .light-mode-heading {
+    @apply text-gray-900 dark:text-white;
+  }
+  
+  .light-mode-subheading {
+    @apply text-gray-700 dark:text-white/80;
+  }
+  
+  .light-mode-text {
+    @apply text-gray-800 dark:text-white/70;
+  }
+  
+  .light-mode-muted {
+    @apply text-gray-600 dark:text-white/60;
+  }
 }

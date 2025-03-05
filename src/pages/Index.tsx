@@ -106,15 +106,15 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center stagger-animation">
-            <div className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 opacity-0 animate-fade-down">
-              <span className="text-xs font-medium text-white/80">AI-Powered Subtitle Translation</span>
+            <div className="inline-block mb-4 px-3 py-1 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-full border border-gray-200 dark:border-white/10 opacity-0 animate-fade-down">
+              <span className="text-xs font-medium text-gray-800 dark:text-white/80">AI-Powered Subtitle Translation</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-gradient opacity-0 animate-fade-up">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-gradient opacity-0 animate-fade-up light-mode-heading">
               GPT Subtitler
             </h1>
             
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto opacity-0 animate-fade-up">
+            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-0 animate-fade-up light-mode-text">
               AI-Powered Subtitling: Fast, Accurate, Effortless. 
               Translate subtitles in seconds with cutting-edge AI technology.
             </p>
@@ -143,8 +143,8 @@ const Index = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">AI Translation Showcase</h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">AI Translation Showcase</h2>
+            <p className="light-mode-text max-w-2xl mx-auto">
               See how our AI-powered translations compare to generic machine translations.
             </p>
           </div>
@@ -157,8 +157,8 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">Powerful Translation Features</h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">Powerful Translation Features</h2>
+            <p className="light-mode-text max-w-2xl mx-auto">
               Experience state-of-the-art subtitle translation with our comprehensive feature set.
             </p>
           </div>
@@ -180,7 +180,7 @@ const Index = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-xl font-medium text-white/80 mb-2">Supported LLM Providers</h2>
+            <h2 className="text-xl font-medium mb-2 light-mode-subheading">Supported LLM Providers</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
           </div>
           
@@ -200,8 +200,8 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">How to Use GPT Subtitler</h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">How to Use GPT Subtitler</h2>
+            <p className="light-mode-text max-w-2xl mx-auto">
               Complete your subtitle translations in just four simple steps.
             </p>
           </div>
@@ -234,8 +234,8 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">Frequently Asked Questions</h2>
+            <p className="light-mode-text max-w-2xl mx-auto">
               Find answers to common questions about GPT Subtitler.
             </p>
           </div>
@@ -250,8 +250,8 @@ const Index = () => {
           <div className="glass-card rounded-lg p-8 md:p-12 max-w-4xl mx-auto text-center relative overflow-hidden animate-on-scroll opacity-0">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/5 to-blue-600/10 animate-pulse-subtle"></div>
             
-            <h2 className="text-3xl font-bold mb-4 relative z-10">Ready to Transform Your Subtitles?</h2>
-            <p className="text-white/70 max-w-xl mx-auto mb-8 relative z-10">
+            <h2 className="text-3xl font-bold mb-4 relative z-10 light-mode-heading">Ready to Transform Your Subtitles?</h2>
+            <p className="light-mode-text max-w-xl mx-auto mb-8 relative z-10">
               Join thousands of content creators who are already using GPT Subtitler to reach global audiences.
             </p>
             
@@ -276,22 +276,22 @@ const Index = () => {
       </section>
       
       {/* Footer */}
-      <footer className="py-12 border-t border-white/10">
+      <footer className="py-12 border-t border-gray-200 dark:border-white/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-medium mb-4">GPT Subtitler</h3>
-              <p className="text-white/60 text-sm">
+              <h3 className="text-lg font-medium mb-4 light-mode-heading">GPT Subtitler</h3>
+              <p className="light-mode-muted text-sm">
                 AI-powered subtitle translation for content creators worldwide.
               </p>
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3">Product</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Product</h4>
               <ul className="space-y-2">
                 {["Features", "Pricing", "Use Cases", "Integrations"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+                    <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
                       {item}
                     </a>
                   </li>
@@ -300,11 +300,11 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3">Resources</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Resources</h4>
               <ul className="space-y-2">
                 {["Documentation", "API", "Guides", "Support"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+                    <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
                       {item}
                     </a>
                   </li>
@@ -313,11 +313,11 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3">Company</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Company</h4>
               <ul className="space-y-2">
                 {["About", "Blog", "Careers", "Contact"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+                    <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
                       {item}
                     </a>
                   </li>
@@ -326,14 +326,14 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm">
+          <div className="mt-12 pt-6 border-t border-gray-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-600 dark:text-white/60 text-sm">
               © {new Date().getFullYear()} GPT Subtitler. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               {["Terms", "Privacy", "Cookies"].map((item) => (
-                <a key={item} href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+                <a key={item} href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
                   {item}
                 </a>
               ))}
