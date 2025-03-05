@@ -29,7 +29,7 @@ const Navbar = () => {
         scrolled
           ? isDark 
             ? "bg-black/30 backdrop-blur-lg border-b border-white/10 py-3" 
-            : "bg-white/70 backdrop-blur-lg border-b border-black/10 py-3"
+            : "bg-white/90 backdrop-blur-lg border-b border-gray-200 py-3 shadow-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -48,8 +48,10 @@ const Navbar = () => {
             <Link
               key={item}
               to={`/${item.toLowerCase()}`}
-              className={`text-sm hover:opacity-100 transition-colors duration-200 ${
-                isDark ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-gray-900"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                isDark 
+                  ? "text-white/80 hover:text-white" 
+                  : "text-gray-700 hover:text-blue-600"
               }`}
             >
               {item}
@@ -61,18 +63,20 @@ const Navbar = () => {
           <ThemeToggle />
           <Link
             to="/login"
-            className={`text-sm transition-colors duration-200 ${
-              isDark ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-gray-900"
+            className={`text-sm font-medium transition-colors duration-200 ${
+              isDark 
+                ? "text-white/80 hover:text-white" 
+                : "text-gray-700 hover:text-blue-600"
             }`}
           >
             Login
           </Link>
           <Link
             to="/signup"
-            className={`text-sm px-4 py-2 rounded-md backdrop-blur-sm transition-all duration-200 ${
+            className={`text-sm px-4 py-2 rounded-md transition-all duration-200 ${
               isDark 
                 ? "bg-white/10 hover:bg-white/20 text-white border border-white/10" 
-                : "bg-gray-800 hover:bg-gray-700 text-white border border-gray-700"
+                : "bg-blue-600 hover:bg-blue-700 text-white border border-blue-700 shadow-sm"
             }`}
           >
             Sign Up

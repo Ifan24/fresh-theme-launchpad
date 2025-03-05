@@ -10,13 +10,13 @@ const ThemeToggle = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Sun size={16} className={`${isDark ? 'text-white/60' : 'text-yellow-500'}`} />
+      <Sun size={16} className={`${isDark ? 'text-white/60' : 'text-amber-500'}`} />
       <Switch
         checked={isDark}
         onCheckedChange={toggleTheme}
-        className={`${isDark ? 'data-[state=checked]:bg-white/10' : 'data-[state=unchecked]:bg-black/10'}`}
+        className={`${isDark ? 'data-[state=checked]:bg-white/10' : 'data-[state=checked]:bg-gray-700 data-[state=unchecked]:bg-amber-300/50'}`}
       />
-      <Moon size={16} className={`${isDark ? 'text-white/90' : 'text-gray-400'}`} />
+      <Moon size={16} className={`${isDark ? 'text-white/90' : 'text-gray-600'}`} />
     </div>
   );
 };
