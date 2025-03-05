@@ -92,11 +92,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/[0.05] backdrop-blur-sm border border-white/10 shadow-lg dark:bg-white/[0.05] dark:border-white/10 light:bg-white/90 light:border-gray-200 light:shadow-md;
+    @apply bg-white/90 border border-gray-200 shadow-md dark:bg-white/[0.05] dark:border-white/10 dark:shadow-lg;
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80 dark:from-white dark:to-white/80 light:from-gray-800 light:to-blue-700;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-blue-700 dark:from-white dark:to-white/80;
   }
   
   .animated-border {
@@ -105,7 +105,7 @@
   
   .animated-border::after {
     content: '';
-    @apply absolute top-0 left-0 right-0 bottom-0 border rounded-md dark:border-white/20 light:border-gray-300;
+    @apply absolute top-0 left-0 right-0 bottom-0 border rounded-md border-gray-300 dark:border-white/20;
     animation: border-pulse 2s infinite;
   }
   
@@ -119,7 +119,7 @@
   }
   
   .hero-blur {
-    @apply absolute w-[400px] h-[400px] rounded-full bg-blue-500/20 blur-[120px] opacity-20 dark:bg-blue-500/20 light:bg-blue-300/30;
+    @apply absolute w-[400px] h-[400px] rounded-full bg-blue-300/30 blur-[120px] opacity-20 dark:bg-blue-500/20;
   }
 
   .stagger-animation > *:nth-child(1) {
