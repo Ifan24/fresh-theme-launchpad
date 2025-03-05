@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -38,32 +39,34 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 };
 
 const FAQ = () => {
+  const { t } = useTranslation();
+  
   const faqs = [
     {
-      question: "How do I translate subtitles?",
-      answer: "Upload your subtitle file, select your target language, and our AI will instantly translate your subtitles while preserving the timing and formatting."
+      question: t("faq.items.how.question"),
+      answer: t("faq.items.how.answer")
     },
     {
-      question: "What file formats are supported for subtitle uploads?",
-      answer: "We support all major subtitle formats including SRT, VTT, ASS, SSA, and more. You can easily convert between formats after translation."
+      question: t("faq.items.formats.question"),
+      answer: t("faq.items.formats.answer")
     },
     {
-      question: "How much does it cost to use the service?",
-      answer: "We offer a free tier with 100,000 tokens. After that, you can purchase additional tokens as needed or subscribe to our premium plans for unlimited translations."
+      question: t("faq.items.cost.question"),
+      answer: t("faq.items.cost.answer")
     },
     {
-      question: "What languages are supported for translation?",
-      answer: "We support over 100 languages for translation, powered by advanced AI models from OpenAI, Claude, Gemini, and more."
+      question: t("faq.items.languages.question"),
+      answer: t("faq.items.languages.answer")
     },
     {
-      question: "How does batch translation work?",
-      answer: "Our batch processing feature allows you to translate multiple subtitle files simultaneously, saving you time on large translation projects."
+      question: t("faq.items.batch.question"),
+      answer: t("faq.items.batch.answer")
     },
   ];
 
   return (
     <div className="glass-card rounded-lg p-6 md:p-8 w-full max-w-3xl mx-auto opacity-0 animate-fade-up">
-      <h2 className="text-2xl font-bold mb-6 light-mode-heading">Frequently Asked Questions</h2>
+      <h2 className="text-2xl font-bold mb-6 light-mode-heading">{t("faq.title")}</h2>
       <div className="space-y-2">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />

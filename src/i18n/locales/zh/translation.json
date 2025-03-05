@@ -1,0 +1,131 @@
+
+{
+  "navbar": {
+    "products": "产品",
+    "pricing": "定价",
+    "qa": "问答",
+    "changelog": "更新日志",
+    "discover": "发现",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "hero": {
+    "badge": "AI驱动的字幕翻译",
+    "title": "GPT字幕翻译器",
+    "subtitle": "AI驱动的字幕翻译：快速、准确、轻松。使用尖端AI技术在几秒钟内翻译字幕。",
+    "cta": {
+      "primary": "免费开始使用",
+      "secondary": "了解更多"
+    }
+  },
+  "comparison": {
+    "title": "AI翻译展示",
+    "subtitle": "看看我们的AI驱动翻译与通用机器翻译的比较效果。"
+  },
+  "features": {
+    "title": "强大的翻译功能",
+    "subtitle": "体验我们全面的功能集，获得最先进的字幕翻译体验。",
+    "items": {
+      "formatSupport": {
+        "title": "多格式支持",
+        "description": "上传SRT、VTT、ASS等格式的字幕。轻松在格式之间进行转换。"
+      },
+      "languages": {
+        "title": "支持100多种语言",
+        "description": "以高精度将字幕翻译成100多种语言。"
+      },
+      "settings": {
+        "title": "高级设置",
+        "description": "通过可定制的设置和偏好微调您的翻译。"
+      },
+      "errorHandling": {
+        "title": "错误处理",
+        "description": "智能错误检测和修正，确保专业质量的字幕。"
+      }
+    }
+  },
+  "providers": {
+    "title": "支持的大语言模型提供商"
+  },
+  "howItWorks": {
+    "title": "如何使用GPT字幕翻译器",
+    "subtitle": "只需四个简单步骤即可完成字幕翻译。",
+    "cta": "立即试用",
+    "steps": {
+      "upload": {
+        "title": "上传字幕文件",
+        "description": "上传任何支持格式的字幕文件以开始翻译过程。"
+      },
+      "select": {
+        "title": "选择翻译选项",
+        "description": "选择目标语言并根据需要调整翻译设置。"
+      },
+      "process": {
+        "title": "处理翻译",
+        "description": "我们的AI模型将翻译您的字幕，同时保留时间和格式。"
+      },
+      "download": {
+        "title": "下载翻译后的字幕",
+        "description": "以您喜欢的格式下载翻译后的字幕。"
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "查找关于GPT字幕翻译器的常见问题答案。",
+    "items": {
+      "how": {
+        "question": "如何翻译字幕？",
+        "answer": "上传您的字幕文件，选择目标语言，我们的AI将立即翻译您的字幕，同时保留时间和格式。"
+      },
+      "formats": {
+        "question": "支持哪些字幕文件格式？",
+        "answer": "我们支持所有主要字幕格式，包括SRT、VTT、ASS、SSA等。您可以在翻译后轻松在格式之间转换。"
+      },
+      "cost": {
+        "question": "使用服务需要多少费用？",
+        "answer": "我们提供免费版本，包含100,000个令牌。之后，您可以根据需要购买额外的令牌或订阅我们的高级计划以获得无限翻译服务。"
+      },
+      "languages": {
+        "question": "支持哪些语言的翻译？",
+        "answer": "我们支持100多种语言的翻译，由OpenAI、Claude、Gemini等先进AI模型提供支持。"
+      },
+      "batch": {
+        "question": "批量翻译如何工作？",
+        "answer": "我们的批处理功能允许您同时翻译多个字幕文件，为大型翻译项目节省时间。"
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好转变您的字幕了吗？",
+    "subtitle": "加入已经使用GPT字幕翻译器接触全球观众的数千名内容创作者。",
+    "primary": "免费开始使用",
+    "secondary": "查看价格"
+  },
+  "footer": {
+    "description": "为全球内容创作者提供AI驱动的字幕翻译。",
+    "product": "产品",
+    "features": "功能",
+    "pricing": "定价",
+    "useCases": "使用案例",
+    "integrations": "集成",
+    "resources": "资源",
+    "documentation": "文档",
+    "api": "API",
+    "guides": "指南",
+    "support": "支持",
+    "company": "公司",
+    "about": "关于我们",
+    "blog": "博客",
+    "careers": "招聘",
+    "contact": "联系我们",
+    "copyright": "© {year} GPT字幕翻译器。保留所有权利。",
+    "terms": "条款",
+    "privacy": "隐私",
+    "cookies": "Cookie"
+  },
+  "language": {
+    "en": "English",
+    "zh": "中文"
+  }
+}

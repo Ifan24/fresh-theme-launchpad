@@ -8,6 +8,9 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+// Import i18n configuration
+import "./i18n/i18n";
+
 const queryClient = new QueryClient();
 
 const App = () => (

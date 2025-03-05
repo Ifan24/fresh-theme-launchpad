@@ -1,12 +1,15 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const isDark = theme === 'dark';
 
   useEffect(() => {
@@ -22,6 +25,14 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
+
+  const navItems = [
+    { key: "products", label: t("navbar.products") },
+    { key: "pricing", label: t("navbar.pricing") },
+    { key: "qa", label: t("navbar.qa") },
+    { key: "changelog", label: t("navbar.changelog") },
+    { key: "discover", label: t("navbar.discover") }
+  ];
 
   return (
     <header
@@ -44,22 +55,23 @@ const Navbar = () => {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          {["Products", "Pricing", "Q&A", "ChangeLog", "Discover"].map((item) => (
+          {navItems.map((item) => (
             <Link
-              key={item}
-              to={`/${item.toLowerCase()}`}
+              key={item.key}
+              to={`/${item.key}`}
               className={`text-sm font-medium transition-colors duration-200 ${
                 isDark 
                   ? "text-white/80 hover:text-white" 
                   : "text-gray-700 hover:text-blue-600"
               }`}
             >
-              {item}
+              {item.label}
             </Link>
           ))}
         </nav>
         
         <div className="flex items-center space-x-4">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Link
             to="/login"
@@ -69,7 +81,7 @@ const Navbar = () => {
                 : "text-gray-700 hover:text-blue-600"
             }`}
           >
-            Login
+            {t("navbar.login")}
           </Link>
           <Link
             to="/signup"
@@ -79,7 +91,7 @@ const Navbar = () => {
                 : "bg-blue-600 hover:bg-blue-700 text-white border border-blue-700 shadow-sm"
             }`}
           >
-            Sign Up
+            {t("navbar.signup")}
           </Link>
         </div>
       </div>

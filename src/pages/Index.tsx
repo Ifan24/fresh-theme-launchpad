@@ -1,6 +1,7 @@
 
 import { useRef, useEffect } from "react";
-import { ArrowRight, Check, FileText, Download, Play, Languages, Settings, AlertCircle, Columns3 } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Check, FileText, Download, Play, Languages, Settings, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FeatureCard from "@/components/FeatureCard";
 import StepCard from "@/components/StepCard";
@@ -10,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import TranslationComparison from "@/components/TranslationComparison";
 
 const Index = () => {
+  const { t } = useTranslation();
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -47,23 +49,23 @@ const Index = () => {
   const features = [
     {
       icon: <FileText className="w-5 h-5 text-blue-400" />,
-      title: "Multiple Format Support",
-      description: "Upload subtitles in SRT, VTT, ASS, and more. Convert between formats effortlessly."
+      title: t("features.items.formatSupport.title"),
+      description: t("features.items.formatSupport.description")
     },
     {
       icon: <Languages className="w-5 h-5 text-blue-400" />,
-      title: "100+ Languages",
-      description: "Translate your subtitles to and from over 100 languages with high accuracy."
+      title: t("features.items.languages.title"),
+      description: t("features.items.languages.description")
     },
     {
       icon: <Settings className="w-5 h-5 text-blue-400" />,
-      title: "Advanced Settings",
-      description: "Fine-tune your translations with customizable settings and preferences."
+      title: t("features.items.settings.title"),
+      description: t("features.items.settings.description")
     },
     {
       icon: <AlertCircle className="w-5 h-5 text-blue-400" />,
-      title: "Error Handling",
-      description: "Intelligent error detection and correction for professional-quality subtitles."
+      title: t("features.items.errorHandling.title"),
+      description: t("features.items.errorHandling.description")
     },
   ];
 
@@ -71,26 +73,26 @@ const Index = () => {
     {
       number: 1,
       icon: <FileText className="w-5 h-5 text-blue-400" />,
-      title: "Upload Subtitle File",
-      description: "Upload your subtitle file in any supported format to begin the translation process."
+      title: t("howItWorks.steps.upload.title"),
+      description: t("howItWorks.steps.upload.description")
     },
     {
       number: 2,
       icon: <Settings className="w-5 h-5 text-blue-400" />,
-      title: "Select Translation Options",
-      description: "Choose your target language and adjust translation settings as needed."
+      title: t("howItWorks.steps.select.title"),
+      description: t("howItWorks.steps.select.description")
     },
     {
       number: 3,
       icon: <Play className="w-5 h-5 text-blue-400" />,
-      title: "Process Translation",
-      description: "Our AI models will translate your subtitles while preserving timing and formatting."
+      title: t("howItWorks.steps.process.title"),
+      description: t("howItWorks.steps.process.description")
     },
     {
       number: 4,
       icon: <Download className="w-5 h-5 text-blue-400" />,
-      title: "Download Translated Subtitles",
-      description: "Download your translated subtitles in your preferred format."
+      title: t("howItWorks.steps.download.title"),
+      description: t("howItWorks.steps.download.description")
     },
   ];
 
@@ -107,16 +109,15 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center stagger-animation">
             <div className="inline-block mb-4 px-3 py-1 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-full border border-gray-200 dark:border-white/10 opacity-0 animate-fade-down">
-              <span className="text-xs font-medium text-gray-800 dark:text-white/80">AI-Powered Subtitle Translation</span>
+              <span className="text-xs font-medium text-gray-800 dark:text-white/80">{t("hero.badge")}</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-gradient opacity-0 animate-fade-up light-mode-heading">
-              GPT Subtitler
+              {t("hero.title")}
             </h1>
             
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-0 animate-fade-up light-mode-text">
-              AI-Powered Subtitling: Fast, Accurate, Effortless. 
-              Translate subtitles in seconds with cutting-edge AI technology.
+              {t("hero.subtitle")}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 opacity-0 animate-fade-up">
@@ -125,14 +126,14 @@ const Index = () => {
                 size="lg"
                 icon={<ArrowRight className="w-4 h-4" />}
               >
-                Get Started for Free
+                {t("hero.cta.primary")}
               </CTAButton>
               
               <CTAButton 
                 variant="secondary" 
                 size="lg"
               >
-                Learn More
+                {t("hero.cta.secondary")}
               </CTAButton>
             </div>
           </div>
@@ -143,9 +144,9 @@ const Index = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4 light-mode-heading">AI Translation Showcase</h2>
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">{t("comparison.title")}</h2>
             <p className="light-mode-text max-w-2xl mx-auto">
-              See how our AI-powered translations compare to generic machine translations.
+              {t("comparison.subtitle")}
             </p>
           </div>
           
@@ -157,9 +158,9 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4 light-mode-heading">Powerful Translation Features</h2>
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">{t("features.title")}</h2>
             <p className="light-mode-text max-w-2xl mx-auto">
-              Experience state-of-the-art subtitle translation with our comprehensive feature set.
+              {t("features.subtitle")}
             </p>
           </div>
           
@@ -180,7 +181,7 @@ const Index = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-xl font-medium mb-2 light-mode-subheading">Supported LLM Providers</h2>
+            <h2 className="text-xl font-medium mb-2 light-mode-subheading">{t("providers.title")}</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
           </div>
           
@@ -200,9 +201,9 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4 light-mode-heading">How to Use GPT Subtitler</h2>
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">{t("howItWorks.title")}</h2>
             <p className="light-mode-text max-w-2xl mx-auto">
-              Complete your subtitle translations in just four simple steps.
+              {t("howItWorks.subtitle")}
             </p>
           </div>
           
@@ -224,7 +225,7 @@ const Index = () => {
               size="lg"
               icon={<ArrowRight className="w-4 h-4" />}
             >
-              Try It Now
+              {t("howItWorks.cta")}
             </CTAButton>
           </div>
         </div>
@@ -234,9 +235,9 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4 light-mode-heading">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 light-mode-heading">{t("faq.title")}</h2>
             <p className="light-mode-text max-w-2xl mx-auto">
-              Find answers to common questions about GPT Subtitler.
+              {t("faq.subtitle")}
             </p>
           </div>
           
@@ -250,9 +251,9 @@ const Index = () => {
           <div className="glass-card rounded-lg p-8 md:p-12 max-w-4xl mx-auto text-center relative overflow-hidden animate-on-scroll opacity-0">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/5 to-blue-600/10 animate-pulse-subtle"></div>
             
-            <h2 className="text-3xl font-bold mb-4 relative z-10 light-mode-heading">Ready to Transform Your Subtitles?</h2>
+            <h2 className="text-3xl font-bold mb-4 relative z-10 light-mode-heading">{t("cta.title")}</h2>
             <p className="light-mode-text max-w-xl mx-auto mb-8 relative z-10">
-              Join thousands of content creators who are already using GPT Subtitler to reach global audiences.
+              {t("cta.subtitle")}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
@@ -261,14 +262,14 @@ const Index = () => {
                 size="lg"
                 icon={<ArrowRight className="w-4 h-4" />}
               >
-                Get Started for Free
+                {t("cta.primary")}
               </CTAButton>
               
               <CTAButton 
                 variant="outline" 
                 size="lg"
               >
-                View Pricing
+                {t("cta.secondary")}
               </CTAButton>
             </div>
           </div>
@@ -282,17 +283,22 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-medium mb-4 light-mode-heading">GPT Subtitler</h3>
               <p className="light-mode-muted text-sm">
-                AI-powered subtitle translation for content creators worldwide.
+                {t("footer.description")}
               </p>
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Product</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">{t("footer.product")}</h4>
               <ul className="space-y-2">
-                {["Features", "Pricing", "Use Cases", "Integrations"].map((item) => (
-                  <li key={item}>
+                {[
+                  { key: "features", label: t("footer.features") },
+                  { key: "pricing", label: t("footer.pricing") },
+                  { key: "useCases", label: t("footer.useCases") },
+                  { key: "integrations", label: t("footer.integrations") }
+                ].map((item) => (
+                  <li key={item.key}>
                     <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
@@ -300,12 +306,17 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Resources</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">{t("footer.resources")}</h4>
               <ul className="space-y-2">
-                {["Documentation", "API", "Guides", "Support"].map((item) => (
-                  <li key={item}>
+                {[
+                  { key: "documentation", label: t("footer.documentation") },
+                  { key: "api", label: t("footer.api") },
+                  { key: "guides", label: t("footer.guides") },
+                  { key: "support", label: t("footer.support") }
+                ].map((item) => (
+                  <li key={item.key}>
                     <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
@@ -313,12 +324,17 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-sm font-medium mb-3 light-mode-subheading">Company</h4>
+              <h4 className="text-sm font-medium mb-3 light-mode-subheading">{t("footer.company")}</h4>
               <ul className="space-y-2">
-                {["About", "Blog", "Careers", "Contact"].map((item) => (
-                  <li key={item}>
+                {[
+                  { key: "about", label: t("footer.about") },
+                  { key: "blog", label: t("footer.blog") },
+                  { key: "careers", label: t("footer.careers") },
+                  { key: "contact", label: t("footer.contact") }
+                ].map((item) => (
+                  <li key={item.key}>
                     <a href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
@@ -328,13 +344,17 @@ const Index = () => {
           
           <div className="mt-12 pt-6 border-t border-gray-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-white/60 text-sm">
-              © {new Date().getFullYear()} GPT Subtitler. All rights reserved.
+              {t("footer.copyright", { year: new Date().getFullYear() })}
             </p>
             
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              {["Terms", "Privacy", "Cookies"].map((item) => (
-                <a key={item} href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
-                  {item}
+              {[
+                { key: "terms", label: t("footer.terms") },
+                { key: "privacy", label: t("footer.privacy") },
+                { key: "cookies", label: t("footer.cookies") }
+              ].map((item) => (
+                <a key={item.key} href="#" className="text-gray-600 dark:text-white/60 text-sm hover:text-blue-600 dark:hover:text-white transition-colors">
+                  {item.label}
                 </a>
               ))}
             </div>

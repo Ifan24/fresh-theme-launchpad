@@ -1,0 +1,131 @@
+
+{
+  "navbar": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "qa": "Q&A",
+    "changelog": "ChangeLog",
+    "discover": "Discover",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "badge": "AI-Powered Subtitle Translation",
+    "title": "GPT Subtitler",
+    "subtitle": "AI-Powered Subtitling: Fast, Accurate, Effortless. Translate subtitles in seconds with cutting-edge AI technology.",
+    "cta": {
+      "primary": "Get Started for Free",
+      "secondary": "Learn More"
+    }
+  },
+  "comparison": {
+    "title": "AI Translation Showcase",
+    "subtitle": "See how our AI-powered translations compare to generic machine translations."
+  },
+  "features": {
+    "title": "Powerful Translation Features",
+    "subtitle": "Experience state-of-the-art subtitle translation with our comprehensive feature set.",
+    "items": {
+      "formatSupport": {
+        "title": "Multiple Format Support",
+        "description": "Upload subtitles in SRT, VTT, ASS, and more. Convert between formats effortlessly."
+      },
+      "languages": {
+        "title": "100+ Languages",
+        "description": "Translate your subtitles to and from over 100 languages with high accuracy."
+      },
+      "settings": {
+        "title": "Advanced Settings",
+        "description": "Fine-tune your translations with customizable settings and preferences."
+      },
+      "errorHandling": {
+        "title": "Error Handling",
+        "description": "Intelligent error detection and correction for professional-quality subtitles."
+      }
+    }
+  },
+  "providers": {
+    "title": "Supported LLM Providers"
+  },
+  "howItWorks": {
+    "title": "How to Use GPT Subtitler",
+    "subtitle": "Complete your subtitle translations in just four simple steps.",
+    "cta": "Try It Now",
+    "steps": {
+      "upload": {
+        "title": "Upload Subtitle File",
+        "description": "Upload your subtitle file in any supported format to begin the translation process."
+      },
+      "select": {
+        "title": "Select Translation Options",
+        "description": "Choose your target language and adjust translation settings as needed."
+      },
+      "process": {
+        "title": "Process Translation",
+        "description": "Our AI models will translate your subtitles while preserving timing and formatting."
+      },
+      "download": {
+        "title": "Download Translated Subtitles",
+        "description": "Download your translated subtitles in your preferred format."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about GPT Subtitler.",
+    "items": {
+      "how": {
+        "question": "How do I translate subtitles?",
+        "answer": "Upload your subtitle file, select your target language, and our AI will instantly translate your subtitles while preserving the timing and formatting."
+      },
+      "formats": {
+        "question": "What file formats are supported for subtitle uploads?",
+        "answer": "We support all major subtitle formats including SRT, VTT, ASS, SSA, and more. You can easily convert between formats after translation."
+      },
+      "cost": {
+        "question": "How much does it cost to use the service?",
+        "answer": "We offer a free tier with 100,000 tokens. After that, you can purchase additional tokens as needed or subscribe to our premium plans for unlimited translations."
+      },
+      "languages": {
+        "question": "What languages are supported for translation?",
+        "answer": "We support over 100 languages for translation, powered by advanced AI models from OpenAI, Claude, Gemini, and more."
+      },
+      "batch": {
+        "question": "How does batch translation work?",
+        "answer": "Our batch processing feature allows you to translate multiple subtitle files simultaneously, saving you time on large translation projects."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Subtitles?",
+    "subtitle": "Join thousands of content creators who are already using GPT Subtitler to reach global audiences.",
+    "primary": "Get Started for Free",
+    "secondary": "View Pricing"
+  },
+  "footer": {
+    "description": "AI-powered subtitle translation for content creators worldwide.",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "useCases": "Use Cases",
+    "integrations": "Integrations",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "api": "API",
+    "guides": "Guides",
+    "support": "Support",
+    "company": "Company",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "copyright": "© {year} GPT Subtitler. All rights reserved.",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
+  "language": {
+    "en": "English",
+    "zh": "中文"
+  }
+}
