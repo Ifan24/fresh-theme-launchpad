@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Check, X, ArrowLeftRight, Languages, ChevronDown } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface TranslationExample {
   id: number;
@@ -10,7 +11,7 @@ interface TranslationExample {
   machineTranslation: string;
   targetLanguage: string;
   englishMeaning?: string;
-  context?: string; // Adding context to explain cultural references/puns
+  context?: string;
 }
 
 const examples: TranslationExample[] = [
@@ -69,6 +70,8 @@ const examples: TranslationExample[] = [
 const TranslationComparison = () => {
   const [activeExample, setActiveExample] = useState<TranslationExample>(examples[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   const handleExampleChange = (example: TranslationExample) => {
     setActiveExample(example);
@@ -78,27 +81,35 @@ const TranslationComparison = () => {
   return (
     <div className="glass-card rounded-lg p-6 md:p-8 w-full max-w-4xl mx-auto opacity-0 animate-fade-up">
       <div className="mb-6 flex justify-between items-center">
-        <h3 className="text-xl font-bold">Translation Comparison</h3>
+        <h3 className="text-xl font-bold light-mode-heading">Translation Comparison</h3>
         
         <div className="relative">
           <button 
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-md border border-white/10 hover:bg-white/20 transition-all duration-200"
+            className={`flex items-center gap-2 px-4 py-2 rounded-md border hover:bg-white/20 transition-all duration-200 ${
+              isDark ? 'bg-white/10 border-white/10' : 'bg-gray-100 border-gray-200'
+            }`}
           >
-            <span>Example {activeExample.id} - {activeExample.targetLanguage}</span>
-            <ChevronDown className="w-4 h-4" />
+            <span className="light-mode-text">Example {activeExample.id} - {activeExample.targetLanguage}</span>
+            <ChevronDown className={`w-4 h-4 ${isDark ? 'text-white/70' : 'text-gray-500'}`} />
           </button>
           
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-72 bg-black/80 backdrop-blur-lg border border-white/10 rounded-md shadow-lg z-10">
+            <div className={`absolute right-0 mt-2 w-72 rounded-md shadow-lg z-10 ${
+              isDark ? 'bg-black/80 backdrop-blur-lg border border-white/10' : 'bg-white border border-gray-200'
+            }`}>
               {examples.map((example) => (
                 <button
                   key={example.id}
-                  className="w-full text-left px-4 py-2 hover:bg-white/10 transition-colors"
+                  className={`w-full text-left px-4 py-2 transition-colors ${
+                    isDark ? 'hover:bg-white/10' : 'hover:bg-gray-100'
+                  }`}
                   onClick={() => handleExampleChange(example)}
                 >
-                  <div>Example {example.id} - {example.targetLanguage}</div>
-                  <div className="text-xs text-white/60 truncate">{example.context}</div>
+                  <div className="light-mode-text">Example {example.id} - {example.targetLanguage}</div>
+                  <div className={`text-xs truncate ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+                    {example.context}
+                  </div>
                 </button>
               ))}
             </div>
@@ -107,8 +118,12 @@ const TranslationComparison = () => {
       </div>
       
       {activeExample.context && (
-        <div className="mb-6 p-3 bg-blue-500/10 border border-blue-500/20 rounded-md">
-          <p className="text-sm text-white/80"><span className="font-semibold">Context:</span> {activeExample.context}</p>
+        <div className={`mb-6 p-3 rounded-md ${
+          isDark ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-blue-50 border border-blue-100'
+        }`}>
+          <p className={`text-sm ${isDark ? 'text-white/80' : 'text-gray-700'}`}>
+            <span className="font-semibold">Context:</span> {activeExample.context}
+          </p>
         </div>
       )}
       
@@ -116,15 +131,19 @@ const TranslationComparison = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2 mb-3">
             <Languages className="w-5 h-5 text-blue-400" />
-            <span className="text-sm font-medium">Original Text ({activeExample.language})</span>
+            <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-700'}`}>
+              Original Text ({activeExample.language})
+            </span>
           </div>
           
-          <div className="p-4 bg-white/5 border border-white/10 rounded-md">
-            <p className="text-white/90">{activeExample.originalText}</p>
+          <div className={`p-4 rounded-md ${
+            isDark ? 'bg-white/5 border border-white/10' : 'bg-gray-50 border border-gray-200'
+          }`}>
+            <p className={`${isDark ? 'text-white/90' : 'text-gray-800'}`}>{activeExample.originalText}</p>
           </div>
           
           <div className="flex justify-center">
-            <div className="bg-white/10 p-2 rounded-full">
+            <div className={`p-2 rounded-full ${isDark ? 'bg-white/10' : 'bg-gray-100'}`}>
               <ArrowLeftRight className="w-5 h-5 text-blue-400" />
             </div>
           </div>
@@ -134,17 +153,21 @@ const TranslationComparison = () => {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="flex items-center gap-1.5">
-                <span className="text-sm font-medium">GPT Subtitler</span>
+                <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-700'}`}>GPT Subtitler</span>
                 <Check className="w-4 h-4 text-green-500" />
               </div>
-              <span className="text-xs text-white/50">({activeExample.targetLanguage})</span>
+              <span className={`text-xs ${isDark ? 'text-white/50' : 'text-gray-500'}`}>({activeExample.targetLanguage})</span>
             </div>
             
-            <div className="p-4 bg-white/5 border border-blue-500/20 rounded-md">
-              <p className="text-white/90">{activeExample.aiTranslation}</p>
+            <div className={`p-4 rounded-md ${
+              isDark ? 'bg-white/5 border border-blue-500/20' : 'bg-gray-50 border border-blue-200'
+            }`}>
+              <p className={`${isDark ? 'text-white/90' : 'text-gray-800'}`}>{activeExample.aiTranslation}</p>
               {activeExample.englishMeaning && (
-                <div className="mt-3 pt-3 border-t border-white/10">
-                  <p className="text-xs text-white/60 italic">English meaning: {activeExample.englishMeaning}</p>
+                <div className={`mt-3 pt-3 ${isDark ? 'border-t border-white/10' : 'border-t border-gray-200'}`}>
+                  <p className={`text-xs italic ${isDark ? 'text-white/60' : 'text-gray-600'}`}>
+                    English meaning: {activeExample.englishMeaning}
+                  </p>
                 </div>
               )}
             </div>
@@ -153,17 +176,23 @@ const TranslationComparison = () => {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="flex items-center gap-1.5">
-                <span className="text-sm font-medium">Generic Machine Translation</span>
+                <span className={`text-sm font-medium ${isDark ? 'text-white' : 'text-gray-700'}`}>
+                  Generic Machine Translation
+                </span>
                 <X className="w-4 h-4 text-red-500" />
               </div>
-              <span className="text-xs text-white/50">({activeExample.targetLanguage})</span>
+              <span className={`text-xs ${isDark ? 'text-white/50' : 'text-gray-500'}`}>({activeExample.targetLanguage})</span>
             </div>
             
-            <div className="p-4 bg-white/5 border border-white/10 rounded-md">
-              <p className="text-white/90">{activeExample.machineTranslation}</p>
+            <div className={`p-4 rounded-md ${
+              isDark ? 'bg-white/5 border border-white/10' : 'bg-gray-50 border border-gray-200'
+            }`}>
+              <p className={`${isDark ? 'text-white/90' : 'text-gray-800'}`}>{activeExample.machineTranslation}</p>
               {activeExample.englishMeaning && (
-                <div className="mt-3 pt-3 border-t border-white/10">
-                  <p className="text-xs text-white/60 italic">English meaning: {activeExample.englishMeaning}</p>
+                <div className={`mt-3 pt-3 ${isDark ? 'border-t border-white/10' : 'border-t border-gray-200'}`}>
+                  <p className={`text-xs italic ${isDark ? 'text-white/60' : 'text-gray-600'}`}>
+                    English meaning: {activeExample.englishMeaning}
+                  </p>
                 </div>
               )}
             </div>
@@ -172,7 +201,7 @@ const TranslationComparison = () => {
       </div>
       
       <div className="mt-6 text-center">
-        <p className="text-sm text-white/70">
+        <p className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>
           GPT Subtitler excels at translating idioms, cultural references, and complex expressions that trip up conventional machine translation.
         </p>
       </div>

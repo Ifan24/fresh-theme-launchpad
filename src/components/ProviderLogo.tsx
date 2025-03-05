@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface ProviderLogoProps {
   name: string;
@@ -8,6 +9,8 @@ interface ProviderLogoProps {
 
 const ProviderLogo = ({ name, delay }: ProviderLogoProps) => {
   const [loaded, setLoaded] = useState(false);
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <div 
@@ -16,10 +19,12 @@ const ProviderLogo = ({ name, delay }: ProviderLogoProps) => {
         animation: `fade-up 0.5s ease-out ${delay}s forwards`
       }}
     >
-      <div className="w-12 h-12 mb-2 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300">
-        <span className="text-white/80 text-xl">{name.charAt(0)}</span>
+      <div className={`w-12 h-12 mb-2 rounded-full flex items-center justify-center transition-all duration-300 ${
+        isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-100 hover:bg-gray-200'
+      }`}>
+        <span className={`text-xl ${isDark ? 'text-white/80' : 'text-gray-700'}`}>{name.charAt(0)}</span>
       </div>
-      <span className="text-white/70 text-xs">{name}</span>
+      <span className={`text-xs ${isDark ? 'text-white/70' : 'text-gray-600'}`}>{name}</span>
     </div>
   );
 };
