@@ -127,5 +127,90 @@
   "language": {
     "en": "English",
     "zh": "中文"
+  },
+  "pricing": {
+    "title": "价格",
+    "subtitle": "选择适合您的计划。所有计划都包含我们的核心翻译功能。",
+    "freePlan": {
+      "title": "免费账号",
+      "price": "永久免费",
+      "features": {
+        "translation": "有限的翻译能力：需要使用tokens进行实际的字幕翻译。",
+        "tokenLimit": "每天可获到到免费的10,000个Tokens。",
+        "models": "基础模型：可使用GPT-4o-mini/Claude-Haiku等模型进行字幕翻译。",
+        "registration": "注册时可获得100,000个Tokens的奖励。",
+        "formats": "支持所有主流字幕格式",
+        "history": "可保存计算历史记录，方便追踪",
+        "batchProcess": "可同时处理5个翻译项目",
+        "maxFiles": "同时翻译最多2个文件"
+      },
+      "buttonText": "创建免费账号"
+    },
+    "basicPlan": {
+      "title": "基础套餐",
+      "price": "每月 5 美元",
+      "features": {
+        "translation": "增强型的翻译能力：需要使用tokens的情况下，可使用ChatGPT一代，无需担心Tokens即可翻译。",
+        "errorHandling": "错误处理：智能错误检测以修复常见字幕格式错误。",
+        "advancedSettings": "高级设置：控制上下文窗口大小和其他模型参数。",
+        "dailyBonus": "每日奖励：每天可免费获得5万tokens奖励！",
+        "tokenDiscount": "使用Tokens进行翻译时，可享受5%的折扣。",
+        "batchProcess": "批量处理：一次处理多达50个字幕文件。",
+        "formatSupport": "格式设置：配置多达20个格式设置。",
+        "maxFiles": "同时翻译最多5个文件"
+      },
+      "buttonText": "选择基础套餐"
+    },
+    "proPlan": {
+      "title": "高级套餐",
+      "price": "每月 9.9 美元",
+      "features": {
+        "translation": "高级翻译能力：需要使用tokens的情况下，可使用ChatGPT一代，无需担心Tokens即可翻译。",
+        "userExperience": "增强用户体验：访问优先支持和高级功能。",
+        "customization": "自定义选项：创建自定义翻译风格。",
+        "qualityControl": "质量控制：通过高级GPT-4处理获得更好的质量。",
+        "dailyBonus": "每日奖励：每天可免费获得10万tokens奖励！",
+        "tokenDiscount": "使用Tokens进行翻译时，可享受10%的折扣",
+        "batchProcess": "批量处理：一次处理多达100个以上的字幕文件。",
+        "formatSettings": "格式设置：配置多达50个格式设置",
+        "maxFiles": "同时翻译最多5个以上文件"
+      },
+      "buttonText": "选择高级套餐"
+    },
+    "buyTokens": {
+      "title": "按需购买Tokens",
+      "features": {
+        "bulk": "购买Tokens大礼包：立即行动！仅需1美元即可获得200,000个Tokens，为您提升翻译能力。",
+        "flexible": "灵活使用：根据需要使用购买的Tokens，没有时间限制。",
+        "discounts": "惊人的批量折扣！批量购买以获得最佳价值 - 最多可获得30%的额外Tokens。"
+      },
+      "buttonText": "购买Tokens"
+    },
+    "calculator": {
+      "title": "Token计算器",
+      "model": "模型",
+      "modelNote": "不同的模型具有不同的token效率。",
+      "usd": "美元",
+      "tokens": "Tokens",
+      "hours": "小时数",
+      "estimate": "可翻译约 {hours} 小时的视频（手机设置：平均质量）"
+    },
+    "faq": {
+      "title": "常见问题",
+      "questions": {
+        "tokens": "Token计算是如何计算的？",
+        "payment": "你们接受哪些支付方式？",
+        "free": "免费账号包含哪些功能？",
+        "refund": "退款政策是什么？"
+      },
+      "answers": {
+        "tokens": "Tokens是我们用来衡量翻译处理的单位。不同的模型对相同的文本使用不同数量的tokens。对于字幕，大约1分钟的视频需要约1,000个tokens进行翻译。",
+        "payment": "我们接受所有主要信用卡、PayPal、Apple Pay、Google Pay，在某些地区，我们还支持微信支付和支付宝。",
+        "free": "免费账户包括100,000个初始tokens，每日最多10,000个奖励tokens，访问基本模型，同时翻译最多2个文件，并支持所有主要字幕格式。",
+        "refund": "我们对所有订阅计划提供7天退款保证。对于token购买，一旦使用就不可退款。"
+      }
+    },
+    "wechatPay": "微信支付",
+    "alipay": "支付宝"
   }
 }
