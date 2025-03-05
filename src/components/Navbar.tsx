@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Subtitles } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -47,11 +48,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link 
           to="/" 
-          className={`text-xl font-bold tracking-tight hover:opacity-80 transition-opacity ${
+          className={`flex items-center gap-2 text-xl font-bold tracking-tight hover:opacity-80 transition-opacity ${
             isDark ? "text-white" : "text-gray-800"
           }`}
         >
-          GPT Subtitler
+          <Subtitles className="w-6 h-6" />
+          <span>GPT Subtitler</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
