@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface Subtitle {
   id: number;
@@ -14,17 +15,19 @@ interface SubtitlePreviewProps {
 
 const SubtitlePreview: React.FC<SubtitlePreviewProps> = ({ subtitles }) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
       {subtitles.map((subtitle) => (
-        <div key={subtitle.id} className="bg-muted p-4 rounded-md">
-          <div className="flex justify-between text-sm text-muted-foreground mb-2">
-            <div>{subtitle.id}</div>
-            <div>{subtitle.startTime} --&gt; {subtitle.endTime}</div>
-          </div>
-          <div className="text-foreground">
-            {subtitle.text}
-          </div>
-        </div>
+        <Card key={subtitle.id} className="overflow-hidden border shadow-sm hover:shadow-md transition-shadow">
+          <CardContent className="p-0">
+            <div className="p-2 bg-muted/50 flex justify-between items-center text-xs text-muted-foreground border-b">
+              <div className="font-medium">#{subtitle.id}</div>
+              <div className="font-mono">{subtitle.startTime} → {subtitle.endTime}</div>
+            </div>
+            <div className="p-3 text-sm">
+              {subtitle.text}
+            </div>
+          </CardContent>
+        </Card>
       ))}
     </div>
   );
