@@ -21,6 +21,19 @@ const SubtitleTranslator = () => {
     { id: 4, startTime: "00:00:13.219", endTime: "00:00:17.000", text: "Attachment" }
   ];
 
+  // Mock data for cost tracking
+  const costData = {
+    inputTokens: 1245,
+    outputTokens: 845,
+    totalTokens: 2090,
+    estimatedCost: 0.042,
+    history: [
+      { id: 1, cost: 0.01, timestamp: new Date() },
+      { id: 2, cost: 0.02, timestamp: new Date() },
+      { id: 3, cost: 0.03, timestamp: new Date() }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -95,13 +108,12 @@ const SubtitleTranslator = () => {
             </Card>
           </div>
           
-          {/* Right column: Settings and Messages */}
+          {/* Right column: Settings and Messages+Cost */}
           <div className="lg:col-span-5">
             <Tabs defaultValue="settings" className="w-full">
               <TabsList className="w-full mb-4">
                 <TabsTrigger value="settings" className="flex-1">Translation Settings</TabsTrigger>
-                <TabsTrigger value="messages" className="flex-1">Messages</TabsTrigger>
-                <TabsTrigger value="cost" className="flex-1">Cost</TabsTrigger>
+                <TabsTrigger value="messages" className="flex-1">Messages & Cost</TabsTrigger>
               </TabsList>
               
               <TabsContent value="settings" className="mt-0">
@@ -114,46 +126,45 @@ const SubtitleTranslator = () => {
               
               <TabsContent value="messages" className="mt-0">
                 <Card>
-                  <CardContent className="p-4 h-[500px] overflow-y-auto">
-                    <TranslationMessages />
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              
-              <TabsContent value="cost" className="mt-0">
-                <Card>
-                  <CardContent className="p-4 h-[500px] overflow-y-auto">
-                    <div className="space-y-4">
-                      <h3 className="text-lg font-medium">Translation Cost</h3>
+                  <CardContent className="p-4 h-[580px] overflow-y-auto space-y-6">
+                    {/* Cost Section */}
+                    <div className="pb-4 border-b">
+                      <h3 className="text-lg font-medium mb-3">Translation Cost</h3>
                       <div className="border rounded-md p-4">
                         <div className="flex justify-between mb-2">
                           <span>Input Tokens:</span>
-                          <span>1,245</span>
+                          <span>{costData.inputTokens.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span>Output Tokens:</span>
-                          <span>845</span>
+                          <span>{costData.outputTokens.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between mb-2">
                           <span>Total Tokens:</span>
-                          <span>2,090</span>
+                          <span>{costData.totalTokens.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between font-medium">
                           <span>Estimated Cost:</span>
-                          <span>$0.042</span>
+                          <span>${costData.estimatedCost.toFixed(3)}</span>
                         </div>
                       </div>
-                      
-                      <h4 className="text-md font-medium mt-6">Cost History</h4>
+                    </div>
+                    
+                    {/* Messages Section */}
+                    <TranslationMessages />
+                    
+                    {/* Cost History Section */}
+                    <div className="pt-2">
+                      <h4 className="text-md font-medium mb-3">Cost History</h4>
                       <div className="space-y-3">
-                        {[1, 2, 3].map((batch) => (
-                          <div key={batch} className="border rounded-md p-3">
+                        {costData.history.map((batch) => (
+                          <div key={batch.id} className="border rounded-md p-3">
                             <div className="flex justify-between text-sm">
-                              <span>Batch #{batch}</span>
-                              <span className="text-blue-600">${(0.01 * batch).toFixed(3)}</span>
+                              <span>Batch #{batch.id}</span>
+                              <span className="text-blue-600">${batch.cost.toFixed(3)}</span>
                             </div>
                             <div className="text-xs text-muted-foreground mt-1">
-                              {new Date().toLocaleString()}
+                              {batch.timestamp.toLocaleString()}
                             </div>
                           </div>
                         ))}

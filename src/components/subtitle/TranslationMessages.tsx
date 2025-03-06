@@ -74,8 +74,8 @@ const TranslationMessages = () => {
   };
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-medium">Translation Messages</h3>
+    <div>
+      <h3 className="text-lg font-medium mb-3">Translation Messages</h3>
       
       <div className="space-y-3">
         {messages.map((message) => (
