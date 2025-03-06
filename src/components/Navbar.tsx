@@ -28,11 +28,10 @@ const Navbar = () => {
   }, [scrolled]);
 
   const navItems = [
-    { key: "products", label: t("navbar.products") },
-    { key: "pricing", label: t("navbar.pricing") },
-    { key: "qa", label: t("navbar.qa") },
-    { key: "changelog", label: t("navbar.changelog") },
-    { key: "discover", label: t("navbar.discover") }
+    { key: "pricing", label: t("common.pricing") },
+    { key: "qa", label: t("common.qa") },
+    { key: "changelog", label: t("common.changelog") },
+    { key: "discover", label: t("common.discover") }
   ];
 
   return (
@@ -53,7 +52,7 @@ const Navbar = () => {
           }`}
         >
           <Subtitles className="w-6 h-6" />
-          <span>GPT Subtitler</span>
+          <span>{t("common.title")}</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -83,7 +82,7 @@ const Navbar = () => {
                 : "text-gray-700 hover:text-blue-600"
             }`}
           >
-            {t("navbar.login")}
+            {t("common.login")}
           </Link>
           <Link
             to="/signup"
@@ -93,7 +92,7 @@ const Navbar = () => {
                 : "bg-blue-600 hover:bg-blue-700 text-white border border-blue-700 shadow-sm"
             }`}
           >
-            {t("navbar.signup")}
+            {t("common.signup")}
           </Link>
         </div>
       </div>
