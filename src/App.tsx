@@ -11,6 +11,7 @@ import Pricing from "./pages/Pricing";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import SubtitleTranslator from "./pages/SubtitleTranslator";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/account" element={<Account />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/subtitle-translator" element={<SubtitleTranslator />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
