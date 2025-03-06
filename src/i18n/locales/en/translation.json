@@ -1,216 +1,237 @@
 
 {
-  "navbar": {
-    "products": "Products",
+  "common": {
+    "title": "GPT Subtitler",
+    "slogan": "AI-powered subtitle translation with deep context understanding",
     "pricing": "Pricing",
     "qa": "Q&A",
     "changelog": "ChangeLog",
     "discover": "Discover",
+    "language": "Language",
     "login": "Login",
-    "signup": "Sign Up"
-  },
-  "hero": {
-    "badge": "AI-Powered Subtitle Translation",
-    "title": "GPT Subtitler",
-    "subtitle": "AI-Powered Subtitling: Fast, Accurate, Effortless. Translate subtitles in seconds with cutting-edge AI technology.",
-    "cta": {
-      "primary": "Get Started for Free",
-      "secondary": "Learn More"
-    }
-  },
-  "comparison": {
-    "title": "Context-Aware Translation Excellence",
-    "subtitle": "Our advanced AI understands the meaning behind words, delivering translations that capture nuance, idioms, and cultural references."
-  },
-  "features": {
-    "title": "Powerful Translation Features",
-    "subtitle": "Experience state-of-the-art subtitle translation with our comprehensive feature set.",
-    "items": {
-      "formatSupport": {
-        "title": "Multiple Format Support",
-        "description": "Upload subtitles in SRT, VTT, ASS, and more. Convert between formats effortlessly."
-      },
-      "languages": {
-        "title": "100+ Languages",
-        "description": "Translate your subtitles to and from over 100 languages with high accuracy."
-      },
-      "settings": {
-        "title": "Advanced Settings",
-        "description": "Fine-tune your translations with customizable settings and preferences."
-      },
-      "errorHandling": {
-        "title": "Error Handling",
-        "description": "Intelligent error detection and correction for professional-quality subtitles."
-      }
-    }
-  },
-  "providers": {
-    "title": "Supported LLM Providers"
-  },
-  "howItWorks": {
-    "title": "How to Use GPT Subtitler",
-    "subtitle": "Complete your subtitle translations in just four simple steps.",
-    "cta": "Try It Now",
-    "steps": {
-      "upload": {
-        "title": "Upload Subtitle File",
-        "description": "Upload your subtitle file in any supported format to begin the translation process."
-      },
-      "select": {
-        "title": "Select Translation Options",
-        "description": "Choose your target language and adjust translation settings as needed."
-      },
-      "process": {
-        "title": "Process Translation",
-        "description": "Our AI models will translate your subtitles while preserving timing and formatting."
-      },
-      "download": {
-        "title": "Download Translated Subtitles",
-        "description": "Download your translated subtitles in your preferred format."
-      }
-    }
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about GPT Subtitler.",
-    "items": {
-      "how": {
-        "question": "How do I translate subtitles?",
-        "answer": "Upload your subtitle file, select your target language, and our AI will instantly translate your subtitles while preserving the timing and formatting."
-      },
-      "formats": {
-        "question": "What file formats are supported for subtitle uploads?",
-        "answer": "We support all major subtitle formats including SRT, VTT, ASS, SSA, and more. You can easily convert between formats after translation."
-      },
-      "cost": {
-        "question": "How much does it cost to use the service?",
-        "answer": "We offer a free tier with 100,000 tokens. After that, you can purchase additional tokens as needed or subscribe to our premium plans for unlimited translations."
-      },
-      "languages": {
-        "question": "What languages are supported for translation?",
-        "answer": "We support over 100 languages for translation, powered by advanced AI models from OpenAI, Claude, Gemini, and more."
-      },
-      "batch": {
-        "question": "How does batch translation work?",
-        "answer": "Our batch processing feature allows you to translate multiple subtitle files simultaneously, saving you time on large translation projects."
-      }
-    }
-  },
-  "cta": {
-    "title": "Ready to Transform Your Subtitles?",
-    "subtitle": "Join thousands of content creators who are already using GPT Subtitler to reach global audiences.",
-    "primary": "Get Started for Free",
-    "secondary": "View Pricing"
-  },
-  "footer": {
-    "description": "AI-powered subtitle translation for content creators worldwide.",
-    "product": "Product",
-    "features": "Features",
-    "pricing": "Pricing",
-    "useCases": "Use Cases",
-    "integrations": "Integrations",
-    "resources": "Resources",
-    "documentation": "Documentation",
-    "api": "API",
-    "guides": "Guides",
-    "support": "Support",
-    "company": "Company",
-    "about": "About",
-    "blog": "Blog",
-    "careers": "Careers",
-    "contact": "Contact",
-    "copyright": "© {year} GPT Subtitler. All rights reserved.",
-    "terms": "Terms",
-    "privacy": "Privacy",
-    "cookies": "Cookies"
+    "signup": "Sign up",
+    "getStarted": "Get Started",
+    "settings": "Settings",
+    "logout": "Logout",
+    "accountSettings": "Account & Settings"
   },
   "language": {
     "en": "English",
-    "zh": "中文"
+    "zh": "Chinese"
+  },
+  "hero": {
+    "title": "AI-Powered Subtitle Translation",
+    "subtitle": "Turn your videos into global content with precise, context-aware translations",
+    "tryNow": "Try Now",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Why Choose GPT Subtitler?",
+    "subtitle": "Our advanced AI delivers unmatched translation quality",
+    "feature1": {
+      "title": "Context-Aware Translations",
+      "description": "Our AI understands context, cultural nuances, and subject-specific terminology for more accurate translations."
+    },
+    "feature2": {
+      "title": "Preserves Original Tone",
+      "description": "Maintain the style, humor, and emotion of your original content across languages."
+    },
+    "feature3": {
+      "title": "Optimized for Video",
+      "description": "Translations specifically designed for subtitle timing, length, and readability."
+    }
+  },
+  "workflow": {
+    "title": "How It Works",
+    "subtitle": "Simple, fast, and accurate subtitle translation in 3 easy steps",
+    "step1": {
+      "title": "Upload Your Video",
+      "description": "Upload your video file or provide a link to your content."
+    },
+    "step2": {
+      "title": "Select Languages",
+      "description": "Choose your source and target languages from our wide selection."
+    },
+    "step3": {
+      "title": "Download Subtitles",
+      "description": "Receive your professionally translated subtitles in just minutes."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join thousands of content creators who trust GPT Subtitler",
+    "testimonial1": {
+      "quote": "GPT Subtitler completely transformed our international content strategy. The translations are impressively accurate and natural.",
+      "author": "Sarah Chen",
+      "role": "Content Director, GlobalMedia"
+    },
+    "testimonial2": {
+      "quote": "I was blown away by how well it preserved my comedy's timing and humor in other languages. My international audience grew by 45%!",
+      "author": "Miguel Rodriguez",
+      "role": "YouTube Creator"
+    },
+    "testimonial3": {
+      "quote": "The context awareness is game-changing. Technical terms in our educational videos are consistently translated correctly.",
+      "author": "Dr. Emily Watson",
+      "role": "Online Education Platform"
+    }
+  },
+  "comparison": {
+    "title": "Context-Aware Subtitle Translation",
+    "subtitle": "Our AI understands the cultural nuances and context that generic translation tools miss",
+    "gptTitle": "GPT Subtitler Translation",
+    "genericTitle": "Generic Machine Translation",
+    "example1": {
+      "context": "Scene: A character makes a baseball reference",
+      "original": "That pitch was way outside!",
+      "gpt": "That pitch was way outside the strike zone!",
+      "generic": "That throw was far outside!"
+    },
+    "example2": {
+      "context": "Scene: A character uses an idiom",
+      "original": "It's raining cats and dogs out there.",
+      "gpt": "It's pouring heavily outside.",
+      "generic": "Animals are falling from the sky outside."
+    }
+  },
+  "account": {
+    "title": "Account & Settings",
+    "description": "Manage your account preferences, subscription, and tokens",
+    "tabs": {
+      "profile": "Profile",
+      "subscription": "Subscription",
+      "tokens": "Tokens",
+      "security": "Security"
+    },
+    "profile": {
+      "title": "Profile Information",
+      "description": "Manage your account details",
+      "email": "Email Address",
+      "username": "Username",
+      "refreshInfo": "Refresh Account Info",
+      "website": "Website Settings",
+      "websiteDescription": "Manage your website and translation preferences",
+      "manageWebsite": "Manage Website Settings",
+      "manageTranslation": "Manage Translation Settings",
+      "viewBookmarks": "View Bookmarked Settings"
+    },
+    "subscription": {
+      "title": "Subscription Details",
+      "description": "View and manage your current subscription plan",
+      "tier": "Subscription Tier",
+      "discount": "Token Discount",
+      "startDate": "Subscription Start Date",
+      "endDate": "Subscription End Date",
+      "dailyUsage": "Daily Subscription Usage",
+      "resetsIn": "Resets in",
+      "manage": "Manage Subscription"
+    },
+    "tokens": {
+      "title": "Token Management",
+      "description": "Track your token balance and transaction history",
+      "balance": "Current Token Balance",
+      "claimDaily": "Claim Daily Reward",
+      "claimedDaily": "Daily Reward Already Claimed",
+      "redeemCode": "Redeem Code",
+      "takeSurvey": "Take a Survey to Earn 200K Tokens",
+      "new": "New",
+      "history": "Token History",
+      "lastRefresh": "Last Refresh Time:",
+      "time": "Time",
+      "amount": "Amount",
+      "event": "Event"
+    },
+    "security": {
+      "title": "Security & Billing",
+      "description": "Manage your account security and payment methods",
+      "password": "Password Settings",
+      "changePassword": "Change Password",
+      "billing": "Billing Information",
+      "manageBilling": "Manage Subscription"
+    }
   },
   "pricing": {
-    "title": "Simple, Transparent Pricing",
-    "subtitle": "Choose the plan that's right for you. All plans include access to our core translation features.",
-    "freePlan": {
-      "title": "Free Account",
-      "price": "Always Free",
-      "features": {
-        "translation": "Limited translation capability: Need to use tokens to perform actual subtitle translations.",
-        "tokenLimit": "Daily free tokens: You can get up to 10,000 tokens per day.",
-        "models": "Basic models: Use GPT-4o-mini/Claude-Haiku for basic subtitle translations.",
-        "registration": "Simple registration: Create an account and get 100,000 free tokens.",
-        "formats": "Format support: Support for all major subtitle formats.",
-        "history": "History management: Keep track of your past translations.",
-        "batchProcess": "Batch processing: Process up to 5 subtitle files at once.",
-        "maxFiles": "Max files: Translate up to 2 files simultaneously."
-      },
-      "buttonText": "Create Free Account"
+    "title": "Transparent Pricing",
+    "subtitle": "Choose the plan that works for your needs",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "savePercent": "Save {{percent}}%",
+    "free": {
+      "title": "Free",
+      "description": "For casual users and small projects",
+      "price": "$0",
+      "features": [
+        "500 tokens daily limit",
+        "Basic translation accuracy",
+        "Standard language support",
+        "Manual subtitle download"
+      ],
+      "cta": "Get Started"
     },
-    "basicPlan": {
-      "title": "Basic Plan",
-      "price": "$5 / Month",
-      "features": {
-        "translation": "Enhanced translation: Need to use tokens, get high-quality translations with ChatGPT-4o and unlimited tokens.",
-        "errorHandling": "Error handling: Smart error detection to fix common subtitle format errors.",
-        "advancedSettings": "Advanced settings: Control context window size and other model parameters.",
-        "dailyBonus": "Daily bonus: Get up to 5,000 free tokens daily!",
-        "tokenDiscount": "Token discount: Get a 5% discount when purchasing tokens.",
-        "batchProcess": "Batch processing: Process up to 50 subtitle files at once.",
-        "formatSupport": "Format settings: Configure up to 20 format settings.",
-        "maxFiles": "Max files: Translate up to 5 files simultaneously."
-      },
-      "buttonText": "Choose Basic Plan"
+    "basic": {
+      "title": "Basic",
+      "description": "For growing creators and businesses",
+      "price": "$19",
+      "features": [
+        "10,000 tokens daily limit",
+        "Enhanced translation accuracy",
+        "30+ language support",
+        "Team sharing options",
+        "Priority support"
+      ],
+      "cta": "Choose Basic"
     },
-    "proPlan": {
-      "title": "Pro Plan",
-      "price": "$9.9 / Month",
-      "features": {
-        "translation": "Premium translations: Need to use tokens, get highest quality translations with ChatGPT-4o and unlimited tokens.",
-        "userExperience": "Enhanced user experience: Access priority support and advanced features.",
-        "customization": "Customization options: Create custom translation styles.",
-        "qualityControl": "Quality control: Get even better quality with advanced GPT-4 handling.",
-        "dailyBonus": "Daily bonus: Get up to 10,000 free tokens daily!",
-        "tokenDiscount": "Token discount: Get a 10% discount when purchasing tokens.",
-        "batchProcess": "Batch processing: Process up to 100+ subtitle files at once.",
-        "formatSettings": "Format settings: Configure up to 50+ format settings.",
-        "maxFiles": "Max files: Translate up to 5+ files simultaneously."
-      },
-      "buttonText": "Choose Pro Plan"
-    },
-    "buyTokens": {
-      "title": "Purchase Tokens",
-      "features": {
-        "bulk": "Bulk token purchase: Buy now! Get 200,000 tokens for just $1 and increase your translation power.",
-        "flexible": "Flexible usage: Use purchased tokens when you need them, with no time constraints.",
-        "discounts": "Amazing volume discounts! Buy in bulk to get the best value - get up to 30% more tokens."
-      },
-      "buttonText": "Buy Tokens"
+    "pro": {
+      "title": "Professional",
+      "description": "For serious content creators and studios",
+      "price": "$49",
+      "features": [
+        "Unlimited daily tokens",
+        "Premium translation accuracy",
+        "50+ language support",
+        "Advanced terminology management",
+        "Custom API integration",
+        "Priority support",
+        "Custom training options"
+      ],
+      "cta": "Choose Pro"
     },
     "calculator": {
       "title": "Token Calculator",
-      "model": "Model",
-      "modelNote": "Different models have different token efficiencies.",
-      "usd": "USD",
-      "tokens": "Tokens",
-      "hours": "Hours",
-      "estimate": "Estimated: {hours} hours of video (average: phone setting)"
+      "subtitle": "Estimate your token usage based on your needs",
+      "hoursInput": "Average video length (hours/month)",
+      "wordsInput": "Average words per minute",
+      "languagesInput": "Number of target languages",
+      "estimatedTitle": "Estimated monthly tokens:",
+      "recommendedTitle": "Recommended plan:",
+      "tokensValue": "{{tokens}} tokens",
+      "disclaimerText": "This is an estimate. Actual usage may vary based on content complexity and specific languages."
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "questions": {
-        "tokens": "How are tokens calculated and used?",
-        "payment": "What payment methods do you accept?",
-        "free": "What features are included in the free account?",
-        "refund": "What is your refund policy?"
-      },
-      "answers": {
-        "tokens": "Tokens are the units we use to measure translation processing. Different models use different amounts of tokens for the same text. For subtitles, approximately 1 minute of video requires around 1,000 tokens for translation.",
-        "payment": "We accept all major credit cards, PayPal, Apple Pay, Google Pay, and in some regions, we also support WeChat Pay and Alipay.",
-        "free": "Free accounts include 100,000 initial tokens, up to 10,000 daily bonus tokens, access to basic models, translation of up to 2 files simultaneously, and support for all major subtitle formats.",
-        "refund": "We offer a 7-day money-back guarantee on all subscription plans. For token purchases, tokens are non-refundable once they have been used."
-      }
+      "questions": [
+        {
+          "question": "What are tokens and how do they work?",
+          "answer": "Tokens are the unit of measurement for our translation service. Each word in your subtitle file typically costs 1-3 tokens to translate, depending on complexity and language pair. Our plans provide different daily token allowances to match your volume needs."
+        },
+        {
+          "question": "Can I upgrade or downgrade my plan later?",
+          "answer": "Yes, you can change your plan at any time. If you upgrade, you'll be charged the prorated difference for the remainder of your billing cycle. If you downgrade, the new rate will apply at the start of your next billing cycle."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards, PayPal, and certain regional payment methods. For enterprise customers, we also support invoicing."
+        },
+        {
+          "question": "Is there a refund policy?",
+          "answer": "We offer a 7-day money-back guarantee for new subscriptions. If you're not satisfied with our service, contact our support team within 7 days of your purchase for a full refund."
+        }
+      ]
     },
-    "wechatPay": "WeChat Pay",
-    "alipay": "Alipay"
+    "enterprise": {
+      "title": "Need a custom enterprise solution?",
+      "description": "We offer tailored plans for large organizations and special use cases.",
+      "cta": "Contact Sales"
+    }
   }
 }

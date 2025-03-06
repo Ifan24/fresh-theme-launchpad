@@ -1,216 +1,237 @@
 
 {
-  "navbar": {
-    "products": "产品",
-    "pricing": "定价",
+  "common": {
+    "title": "GPT 字幕翻译",
+    "slogan": "具有深度上下文理解的AI驱动字幕翻译",
+    "pricing": "价格",
     "qa": "问答",
     "changelog": "更新日志",
     "discover": "发现",
+    "language": "语言",
     "login": "登录",
-    "signup": "注册"
+    "signup": "注册",
+    "getStarted": "开始使用",
+    "settings": "设置",
+    "logout": "退出登录",
+    "accountSettings": "账户与设置"
+  },
+  "language": {
+    "en": "英文",
+    "zh": "中文"
   },
   "hero": {
-    "badge": "AI驱动的字幕翻译",
-    "title": "GPT字幕翻译器",
-    "subtitle": "AI驱动的字幕翻译：快速、准确、轻松。使用尖端AI技术在几秒钟内翻译字幕。",
-    "cta": {
-      "primary": "免费开始使用",
-      "secondary": "了解更多"
+    "title": "AI驱动的字幕翻译",
+    "subtitle": "通过精准的、上下文感知的翻译，让您的视频面向全球",
+    "tryNow": "立即尝试",
+    "learnMore": "了解更多"
+  },
+  "features": {
+    "title": "为什么选择GPT字幕翻译？",
+    "subtitle": "我们的先进AI提供无与伦比的翻译质量",
+    "feature1": {
+      "title": "上下文感知翻译",
+      "description": "我们的AI理解上下文、文化差异和特定主题术语，提供更准确的翻译。"
+    },
+    "feature2": {
+      "title": "保留原始语调",
+      "description": "在跨语言翻译过程中保持您原始内容的风格、幽默感和情感。"
+    },
+    "feature3": {
+      "title": "专为视频优化",
+      "description": "翻译专门为字幕的时间、长度和可读性而设计。"
+    }
+  },
+  "workflow": {
+    "title": "工作流程",
+    "subtitle": "通过3个简单步骤实现快速准确的字幕翻译",
+    "step1": {
+      "title": "上传您的视频",
+      "description": "上传您的视频文件或提供内容链接。"
+    },
+    "step2": {
+      "title": "选择语言",
+      "description": "从我们丰富的选择中选择源语言和目标语言。"
+    },
+    "step3": {
+      "title": "下载字幕",
+      "description": "在几分钟内获得专业翻译的字幕。"
+    }
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "加入数千名信任GPT字幕翻译的内容创作者",
+    "testimonial1": {
+      "quote": "GPT字幕翻译彻底改变了我们的国际内容策略。翻译非常准确自然。",
+      "author": "陈萨拉",
+      "role": "内容总监，全球媒体"
+    },
+    "testimonial2": {
+      "quote": "我对它如何在其他语言中保留我喜剧的节奏和幽默感感到惊讶。我的国际观众增长了45%！",
+      "author": "米格尔·罗德里格斯",
+      "role": "YouTube创作者"
+    },
+    "testimonial3": {
+      "quote": "上下文感知功能是革命性的。我们教育视频中的技术术语始终被正确翻译。",
+      "author": "艾米丽·沃森博士",
+      "role": "在线教育平台"
     }
   },
   "comparison": {
-    "title": "深度语境感知翻译",
-    "subtitle": "我们的先进AI理解词语背后的含义，提供能够把握微妙之处、习语和文化参考的高质量翻译。"
-  },
-  "features": {
-    "title": "强大的翻译功能",
-    "subtitle": "体验我们全面的功能集，获得最先进的字幕翻译体验。",
-    "items": {
-      "formatSupport": {
-        "title": "多格式支持",
-        "description": "上传SRT、VTT、ASS等格式的字幕。轻松在格式之间进行转换。"
-      },
-      "languages": {
-        "title": "支持100多种语言",
-        "description": "以高精度将字幕翻译成100多种语言。"
-      },
-      "settings": {
-        "title": "高级设置",
-        "description": "通过可定制的设置和偏好微调您的翻译。"
-      },
-      "errorHandling": {
-        "title": "错误处理",
-        "description": "智能错误检测和修正，确保专业质量的字幕。"
-      }
+    "title": "上下文感知字幕翻译",
+    "subtitle": "我们的AI理解通用翻译工具所忽略的文化细微差别和上下文",
+    "gptTitle": "GPT字幕翻译",
+    "genericTitle": "通用机器翻译",
+    "example1": {
+      "context": "场景：角色引用棒球",
+      "original": "That pitch was way outside!",
+      "gpt": "那个投球完全超出了击球区！",
+      "generic": "那个投掷在外面很远！"
+    },
+    "example2": {
+      "context": "场景：角色使用习语",
+      "original": "It's raining cats and dogs out there.",
+      "gpt": "外面下着倾盆大雨。",
+      "generic": "外面正在下猫和狗。"
     }
   },
-  "providers": {
-    "title": "支持的大语言模型提供商"
-  },
-  "howItWorks": {
-    "title": "如何使用GPT字幕翻译器",
-    "subtitle": "只需四个简单步骤即可完成字幕翻译。",
-    "cta": "立即试用",
-    "steps": {
-      "upload": {
-        "title": "上传字幕文件",
-        "description": "上传任何支持格式的字幕文件以开始翻译过程。"
-      },
-      "select": {
-        "title": "选择翻译选项",
-        "description": "选择目标语言并根据需要调整翻译设置。"
-      },
-      "process": {
-        "title": "处理翻译",
-        "description": "我们的AI模型将翻译您的字幕，同时保留时间和格式。"
-      },
-      "download": {
-        "title": "下载翻译后的字幕",
-        "description": "以您喜欢的格式下载翻译后的字幕。"
-      }
+  "account": {
+    "title": "账户与设置",
+    "description": "管理您的账户偏好、订阅和代币",
+    "tabs": {
+      "profile": "个人资料",
+      "subscription": "订阅",
+      "tokens": "代币",
+      "security": "安全"
+    },
+    "profile": {
+      "title": "个人资料信息",
+      "description": "管理您的账户详情",
+      "email": "电子邮箱",
+      "username": "用户名",
+      "refreshInfo": "刷新账户信息",
+      "website": "网站设置",
+      "websiteDescription": "管理您的网站和翻译偏好",
+      "manageWebsite": "管理网站设置",
+      "manageTranslation": "管理翻译设置",
+      "viewBookmarks": "查看已收藏设置"
+    },
+    "subscription": {
+      "title": "订阅详情",
+      "description": "查看和管理您当前的订阅计划",
+      "tier": "订阅级别",
+      "discount": "代币折扣",
+      "startDate": "订阅开始日期",
+      "endDate": "订阅结束日期",
+      "dailyUsage": "每日订阅使用量",
+      "resetsIn": "重置时间",
+      "manage": "管理订阅"
+    },
+    "tokens": {
+      "title": "代币管理",
+      "description": "跟踪您的代币余额和交易历史",
+      "balance": "当前代币余额",
+      "claimDaily": "领取每日奖励",
+      "claimedDaily": "已领取每日奖励",
+      "redeemCode": "兑换代码",
+      "takeSurvey": "参与调查赚取20万代币",
+      "new": "新",
+      "history": "代币历史",
+      "lastRefresh": "上次刷新时间：",
+      "time": "时间",
+      "amount": "数量",
+      "event": "事件"
+    },
+    "security": {
+      "title": "安全与支付",
+      "description": "管理您的账户安全和支付方式",
+      "password": "密码设置",
+      "changePassword": "修改密码",
+      "billing": "支付信息",
+      "manageBilling": "管理订阅"
     }
-  },
-  "faq": {
-    "title": "常见问题",
-    "subtitle": "查找关于GPT字幕翻译器的常见问题答案。",
-    "items": {
-      "how": {
-        "question": "如何翻译字幕？",
-        "answer": "上传您的字幕文件，选择目标语言，我们的AI将立即翻译您的字幕，同时保留时间和格式。"
-      },
-      "formats": {
-        "question": "支持哪些字幕文件格式？",
-        "answer": "我们支持所有主要字幕格式，包括SRT、VTT、ASS、SSA等。您可以在翻译后轻松在格式之间转换。"
-      },
-      "cost": {
-        "question": "使用服务需要多少费用？",
-        "answer": "我们提供免费版本，包含100,000个令牌。之后，您可以根据需要购买额外的令牌或订阅我们的高级计划以获得无限翻译服务。"
-      },
-      "languages": {
-        "question": "支持哪些语言的翻译？",
-        "answer": "我们支持100多种语言的翻译，由OpenAI、Claude、Gemini等先进AI模型提供支持。"
-      },
-      "batch": {
-        "question": "批量翻译如何工作？",
-        "answer": "我们的批处理功能允许您同时翻译多个字幕文件，为大型翻译项目节省时间。"
-      }
-    }
-  },
-  "cta": {
-    "title": "准备好转变您的字幕了吗？",
-    "subtitle": "加入已经使用GPT字幕翻译器接触全球观众的数千名内容创作者。",
-    "primary": "免费开始使用",
-    "secondary": "查看价格"
-  },
-  "footer": {
-    "description": "为全球内容创作者提供AI驱动的字幕翻译。",
-    "product": "产品",
-    "features": "功能",
-    "pricing": "定价",
-    "useCases": "使用案例",
-    "integrations": "集成",
-    "resources": "资源",
-    "documentation": "文档",
-    "api": "API",
-    "guides": "指南",
-    "support": "支持",
-    "company": "公司",
-    "about": "关于我们",
-    "blog": "博客",
-    "careers": "招聘",
-    "contact": "联系我们",
-    "copyright": "© {year} GPT字幕翻译器。保留所有权利。",
-    "terms": "条款",
-    "privacy": "隐私",
-    "cookies": "Cookie"
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文"
   },
   "pricing": {
-    "title": "价格",
-    "subtitle": "选择适合您的计划。所有计划都包含我们的核心翻译功能。",
-    "freePlan": {
-      "title": "免费账号",
-      "price": "永久免费",
-      "features": {
-        "translation": "有限的翻译能力：需要使用tokens进行实际的字幕翻译。",
-        "tokenLimit": "每天可获到到免费的10,000个Tokens。",
-        "models": "基础模型：可使用GPT-4o-mini/Claude-Haiku等模型进行字幕翻译。",
-        "registration": "注册时可获得100,000个Tokens的奖励。",
-        "formats": "支持所有主流字幕格式",
-        "history": "可保存计算历史记录，方便追踪",
-        "batchProcess": "可同时处理5个翻译项目",
-        "maxFiles": "同时翻译最多2个文件"
-      },
-      "buttonText": "创建免费账号"
+    "title": "透明定价",
+    "subtitle": "选择适合您需求的计划",
+    "monthly": "月付",
+    "yearly": "年付",
+    "savePercent": "节省 {{percent}}%",
+    "free": {
+      "title": "免费",
+      "description": "适合日常用户和小型项目",
+      "price": "¥0",
+      "features": [
+        "每日500代币限额",
+        "基础翻译准确度",
+        "标准语言支持",
+        "手动字幕下载"
+      ],
+      "cta": "开始使用"
     },
-    "basicPlan": {
-      "title": "基础套餐",
-      "price": "每月 5 美元",
-      "features": {
-        "translation": "增强型的翻译能力：需要使用tokens的情况下，可使用ChatGPT一代，无需担心Tokens即可翻译。",
-        "errorHandling": "错误处理：智能错误检测以修复常见字幕格式错误。",
-        "advancedSettings": "高级设置：控制上下文窗口大小和其他模型参数。",
-        "dailyBonus": "每日奖励：每天可免费获得5万tokens奖励！",
-        "tokenDiscount": "使用Tokens进行翻译时，可享受5%的折扣。",
-        "batchProcess": "批量处理：一次处理多达50个字幕文件。",
-        "formatSupport": "格式设置：配置多达20个格式设置。",
-        "maxFiles": "同时翻译最多5个文件"
-      },
-      "buttonText": "选择基础套餐"
+    "basic": {
+      "title": "基础版",
+      "description": "适合成长中的创作者和企业",
+      "price": "¥129",
+      "features": [
+        "每日10,000代币限额",
+        "增强翻译准确度",
+        "30+语言支持",
+        "团队共享选项",
+        "优先支持"
+      ],
+      "cta": "选择基础版"
     },
-    "proPlan": {
-      "title": "高级套餐",
-      "price": "每月 9.9 美元",
-      "features": {
-        "translation": "高级翻译能力：需要使用tokens的情况下，可使用ChatGPT一代，无需担心Tokens即可翻译。",
-        "userExperience": "增强用户体验：访问优先支持和高级功能。",
-        "customization": "自定义选项：创建自定义翻译风格。",
-        "qualityControl": "质量控制：通过高级GPT-4处理获得更好的质量。",
-        "dailyBonus": "每日奖励：每天可免费获得10万tokens奖励！",
-        "tokenDiscount": "使用Tokens进行翻译时，可享受10%的折扣",
-        "batchProcess": "批量处理：一次处理多达100个以上的字幕文件。",
-        "formatSettings": "格式设置：配置多达50个格式设置",
-        "maxFiles": "同时翻译最多5个以上文件"
-      },
-      "buttonText": "选择高级套餐"
-    },
-    "buyTokens": {
-      "title": "按需购买Tokens",
-      "features": {
-        "bulk": "购买Tokens大礼包：立即行动！仅需1美元即可获得200,000个Tokens，为您提升翻译能力。",
-        "flexible": "灵活使用：根据需要使用购买的Tokens，没有时间限制。",
-        "discounts": "惊人的批量折扣！批量购买以获得最佳价值 - 最多可获得30%的额外Tokens。"
-      },
-      "buttonText": "购买Tokens"
+    "pro": {
+      "title": "专业版",
+      "description": "适合专业内容创作者和工作室",
+      "price": "¥329",
+      "features": [
+        "无限日常代币",
+        "高级翻译准确度",
+        "50+语言支持",
+        "高级术语管理",
+        "自定义API集成",
+        "优先支持",
+        "自定义训练选项"
+      ],
+      "cta": "选择专业版"
     },
     "calculator": {
-      "title": "Token计算器",
-      "model": "模型",
-      "modelNote": "不同的模型具有不同的token效率。",
-      "usd": "美元",
-      "tokens": "Tokens",
-      "hours": "小时数",
-      "estimate": "可翻译约 {hours} 小时的视频（手机设置：平均质量）"
+      "title": "代币计算器",
+      "subtitle": "根据您的需求估算代币使用量",
+      "hoursInput": "平均视频长度（小时/月）",
+      "wordsInput": "每分钟平均字数",
+      "languagesInput": "目标语言数量",
+      "estimatedTitle": "预估月度代币：",
+      "recommendedTitle": "推荐计划：",
+      "tokensValue": "{{tokens}} 代币",
+      "disclaimerText": "这是一个估算。实际使用量可能因内容复杂度和特定语言而异。"
     },
     "faq": {
       "title": "常见问题",
-      "questions": {
-        "tokens": "Token计算是如何计算的？",
-        "payment": "你们接受哪些支付方式？",
-        "free": "免费账号包含哪些功能？",
-        "refund": "退款政策是什么？"
-      },
-      "answers": {
-        "tokens": "Tokens是我们用来衡量翻译处理的单位。不同的模型对相同的文本使用不同数量的tokens。对于字幕，大约1分钟的视频需要约1,000个tokens进行翻译。",
-        "payment": "我们接受所有主要信用卡、PayPal、Apple Pay、Google Pay，在某些地区，我们还支持微信支付和支付宝。",
-        "free": "免费账户包括100,000个初始tokens，每日最多10,000个奖励tokens，访问基本模型，同时翻译最多2个文件，并支持所有主要字幕格式。",
-        "refund": "我们对所有订阅计划提供7天退款保证。对于token购买，一旦使用就不可退款。"
-      }
+      "questions": [
+        {
+          "question": "什么是代币，它们如何运作？",
+          "answer": "代币是我们翻译服务的计量单位。字幕文件中的每个词通常需要1-3个代币来翻译，具体取决于复杂度和语言对。我们的计划提供不同的日常代币配额以匹配您的容量需求。"
+        },
+        {
+          "question": "我可以之后升级或降级我的计划吗？",
+          "answer": "是的，您可以随时更改计划。如果您升级，您将被收取余下计费周期的按比例差额。如果您降级，新费率将在下一个计费周期开始时应用。"
+        },
+        {
+          "question": "您接受哪些支付方式？",
+          "answer": "我们接受所有主要信用卡、支付宝、微信支付和某些区域支付方式。对于企业客户，我们还支持发票付款。"
+        },
+        {
+          "question": "是否有退款政策？",
+          "answer": "我们为新订阅提供7天退款保证。如果您对我们的服务不满意，请在购买后7天内联系我们的支持团队获得全额退款。"
+        }
+      ]
     },
-    "wechatPay": "微信支付",
-    "alipay": "支付宝"
+    "enterprise": {
+      "title": "需要定制企业解决方案？",
+      "description": "我们为大型组织和特殊用例提供量身定制的计划。",
+      "cta": "联系销售"
+    }
   }
 }
