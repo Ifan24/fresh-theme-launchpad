@@ -1,16 +1,13 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Subtitles } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
-  const { t } = useTranslation();
   const isDark = theme === 'dark';
 
   useEffect(() => {
@@ -28,10 +25,10 @@ const Navbar = () => {
   }, [scrolled]);
 
   const navItems = [
-    { key: "pricing", label: t("common.pricing") },
-    { key: "qa", label: t("common.qa") },
-    { key: "changelog", label: t("common.changelog") },
-    { key: "discover", label: t("common.discover") }
+    { key: "pricing", label: "Pricing" },
+    { key: "qa", label: "Q&A" },
+    { key: "changelog", label: "ChangeLog" },
+    { key: "discover", label: "Discover" }
   ];
 
   return (
@@ -52,7 +49,7 @@ const Navbar = () => {
           }`}
         >
           <Subtitles className="w-6 h-6" />
-          <span>{t("common.title")}</span>
+          <span>GPT Subtitler</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -72,7 +69,6 @@ const Navbar = () => {
         </nav>
         
         <div className="flex items-center space-x-4">
-          <LanguageSwitcher />
           <ThemeToggle />
           <Link
             to="/login"
@@ -82,7 +78,7 @@ const Navbar = () => {
                 : "text-gray-700 hover:text-blue-600"
             }`}
           >
-            {t("common.login")}
+            Login
           </Link>
           <Link
             to="/signup"
@@ -92,7 +88,7 @@ const Navbar = () => {
                 : "bg-blue-600 hover:bg-blue-700 text-white border border-blue-700 shadow-sm"
             }`}
           >
-            {t("common.signup")}
+            Sign up
           </Link>
         </div>
       </div>

@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Eye, EyeOff, LogIn, User } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Input } from "@/components/ui/input";
@@ -10,7 +9,6 @@ import CTAButton from "@/components/CTAButton";
 import { toast } from "sonner";
 
 const Login = () => {
-  const { t } = useTranslation();
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +23,7 @@ const Login = () => {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      toast.success(t("auth.loginSuccess"));
+      toast.success("Login successful!");
       // No actual navigation since we're just designing the frontend
     }, 1500);
   };
@@ -36,22 +34,22 @@ const Login = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold">
             <User size={28} />
-            <span>{t("common.title")}</span>
+            <span>GPT Subtitler</span>
           </Link>
-          <h1 className="text-2xl font-bold mt-6">{t("auth.welcomeBack")}</h1>
-          <p className="text-muted-foreground mt-2">{t("auth.loginToContinue")}</p>
+          <h1 className="text-2xl font-bold mt-6">Welcome back</h1>
+          <p className="text-muted-foreground mt-2">Please login to continue</p>
         </div>
 
         <Card className={`w-full ${isDark ? 'border-white/10 bg-black/20 backdrop-blur-sm' : ''}`}>
           <CardHeader>
-            <CardTitle>{t("auth.login")}</CardTitle>
-            <CardDescription>{t("auth.enterCredentials")}</CardDescription>
+            <CardTitle>Login</CardTitle>
+            <CardDescription>Enter your credentials to access your account</CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  {t("auth.email")}
+                  Email
                 </label>
                 <Input
                   id="email"
@@ -65,7 +63,7 @@ const Login = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  {t("auth.password")}
+                  Password
                 </label>
                 <div className="relative">
                   <Input
@@ -94,11 +92,11 @@ const Login = () => {
                     className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/80"
                   />
                   <label htmlFor="remember" className="text-sm text-muted-foreground">
-                    {t("auth.rememberMe")}
+                    Remember me
                   </label>
                 </div>
                 <Link to="/forgot-password" className="text-sm font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                  {t("auth.forgotPassword")}
+                  Forgot password?
                 </Link>
               </div>
             </CardContent>
@@ -110,12 +108,12 @@ const Login = () => {
                 disabled={isLoading}
                 icon={<LogIn size={18} />}
               >
-                {isLoading ? t("auth.loggingIn") : t("auth.login")}
+                {isLoading ? "Logging in..." : "Login"}
               </CTAButton>
               <p className="text-center text-sm text-muted-foreground">
-                {t("auth.newUser")}{" "}
+                New user?{" "}
                 <Link to="/signup" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                  {t("auth.createAccount")}
+                  Create an account
                 </Link>
               </p>
             </CardFooter>

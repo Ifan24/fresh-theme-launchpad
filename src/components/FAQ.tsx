@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -39,34 +38,32 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 };
 
 const FAQ = () => {
-  const { t } = useTranslation();
-  
   const faqs = [
     {
-      question: t("faq.items.how.question"),
-      answer: t("faq.items.how.answer")
+      question: "How does GPT Subtitler work?",
+      answer: "GPT Subtitler uses advanced AI models to translate subtitles with context awareness, ensuring accurate translations that preserve the original meaning, tone, and cultural nuances."
     },
     {
-      question: t("faq.items.formats.question"),
-      answer: t("faq.items.formats.answer")
+      question: "What file formats are supported?",
+      answer: "We support all common subtitle formats including SRT, VTT, ASS/SSA, and more. You can also directly upload video files with embedded subtitles."
     },
     {
-      question: t("faq.items.cost.question"),
-      answer: t("faq.items.cost.answer")
+      question: "How much does it cost?",
+      answer: "We offer a free tier with basic features and paid plans starting at $19/month. Check our pricing page for detailed information about our plans and features."
     },
     {
-      question: t("faq.items.languages.question"),
-      answer: t("faq.items.languages.answer")
+      question: "Which languages are supported?",
+      answer: "GPT Subtitler supports over 50 languages for our Pro plan, with all major world languages available even on our free tier. Our system is constantly being trained on new languages."
     },
     {
-      question: t("faq.items.batch.question"),
-      answer: t("faq.items.batch.answer")
-    },
+      question: "Can I process multiple files at once?",
+      answer: "Yes, our batch processing feature allows you to translate multiple subtitle files simultaneously, saving you time on large projects."
+    }
   ];
 
   return (
     <div className="glass-card rounded-lg p-6 md:p-8 w-full max-w-3xl mx-auto opacity-0 animate-fade-up">
-      <h2 className="text-2xl font-bold mb-6 light-mode-heading">{t("faq.title")}</h2>
+      <h2 className="text-2xl font-bold mb-6 light-mode-heading">Frequently Asked Questions</h2>
       <div className="space-y-2">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />

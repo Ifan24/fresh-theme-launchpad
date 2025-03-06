@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Eye, EyeOff, UserPlus, User } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Input } from "@/components/ui/input";
@@ -10,7 +9,6 @@ import CTAButton from "@/components/CTAButton";
 import { toast } from "sonner";
 
 const Signup = () => {
-  const { t } = useTranslation();
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +22,7 @@ const Signup = () => {
     e.preventDefault();
     
     if (!agreedToTerms) {
-      toast.error(t("auth.mustAgreeToTerms"));
+      toast.error("You must agree to the Terms of Service and Privacy Policy");
       return;
     }
     
@@ -33,7 +31,7 @@ const Signup = () => {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      toast.success(t("auth.accountCreated"));
+      toast.success("Your account has been created!");
       // No actual navigation since we're just designing the frontend
     }, 1500);
   };
@@ -44,27 +42,27 @@ const Signup = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 text-2xl font-bold">
             <User size={28} />
-            <span>{t("common.title")}</span>
+            <span>GPT Subtitler</span>
           </Link>
-          <h1 className="text-2xl font-bold mt-6">{t("auth.createAccount")}</h1>
-          <p className="text-muted-foreground mt-2">{t("auth.joinCommunity")}</p>
+          <h1 className="text-2xl font-bold mt-6">Create an account</h1>
+          <p className="text-muted-foreground mt-2">Join our community of content creators</p>
         </div>
 
         <Card className={`w-full ${isDark ? 'border-white/10 bg-black/20 backdrop-blur-sm' : ''}`}>
           <CardHeader>
-            <CardTitle>{t("auth.signup")}</CardTitle>
-            <CardDescription>{t("auth.fillDetails")}</CardDescription>
+            <CardTitle>Sign up</CardTitle>
+            <CardDescription>Fill in your details to create your account</CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  {t("auth.fullName")}
+                  Full Name
                 </label>
                 <Input
                   id="name"
                   type="text"
-                  placeholder={t("auth.fullNamePlaceholder")}
+                  placeholder="John Doe"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className={isDark ? "border-white/10 bg-white/5" : ""}
@@ -73,7 +71,7 @@ const Signup = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  {t("auth.email")}
+                  Email
                 </label>
                 <Input
                   id="email"
@@ -87,7 +85,7 @@ const Signup = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                  {t("auth.password")}
+                  Password
                 </label>
                 <div className="relative">
                   <Input
@@ -108,7 +106,7 @@ const Signup = () => {
                   </button>
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
-                  {t("auth.passwordRequirements")}
+                  Password must be at least 8 characters long with numbers and letters.
                 </p>
               </div>
               <div className="flex items-start space-x-2 pt-2">
@@ -121,13 +119,13 @@ const Signup = () => {
                   required
                 />
                 <label htmlFor="terms" className="text-sm text-muted-foreground">
-                  {t("auth.agreeToTerms")}{" "}
+                  I agree to the{" "}
                   <Link to="/terms" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                    {t("auth.termsOfService")}
+                    Terms of Service
                   </Link>{" "}
-                  {t("auth.and")}{" "}
+                  and{" "}
                   <Link to="/privacy" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                    {t("auth.privacyPolicy")}
+                    Privacy Policy
                   </Link>
                 </label>
               </div>
@@ -140,12 +138,12 @@ const Signup = () => {
                 disabled={isLoading}
                 icon={<UserPlus size={18} />}
               >
-                {isLoading ? t("auth.creating") : t("auth.createAccount")}
+                {isLoading ? "Creating account..." : "Create an account"}
               </CTAButton>
               <p className="text-center text-sm text-muted-foreground">
-                {t("auth.alreadyHaveAccount")}{" "}
+                Already have an account?{" "}
                 <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
-                  {t("auth.login")}
+                  Login
                 </Link>
               </p>
             </CardFooter>

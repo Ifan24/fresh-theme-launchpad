@@ -12,9 +12,6 @@ import Account from "./pages/Account";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-// Import i18n configuration
-import "./i18n/i18n";
-
 const queryClient = new QueryClient();
 
 const App = () => (
