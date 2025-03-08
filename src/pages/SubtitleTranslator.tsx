@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import SubtitlePreview from "@/components/subtitle/SubtitlePreview";
 import TranslationSettings from "@/components/subtitle/TranslationSettings";
@@ -58,52 +56,7 @@ const SubtitleTranslator = () => {
                   <SubtitlePreview subtitles={mockSubtitles} />
                 </div>
                 
-                <div className="mt-6">
-                  <h3 className="text-sm font-medium mb-2">Attachment</h3>
-                  <div className="flex space-x-2">
-                    <div className="flex-1">
-                      <Input type="file" className="cursor-pointer" />
-                    </div>
-                  </div>
-                  
-                  <div className="mt-4 flex space-x-2">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center transition-colors">
-                      Save
-                    </button>
-                    <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center transition-colors">
-                      Delete
-                    </button>
-                  </div>
-                  
-                  <TranslationActions />
-                  
-                  <div className="mt-4 space-y-2">
-                    <div className="flex flex-col space-y-2">
-                      <label className="text-sm font-medium">Export Format</label>
-                      <select className="h-10 rounded-md border border-input bg-background px-3 py-2 text-sm">
-                        <option>SRT</option>
-                        <option>VTT</option>
-                        <option>JSON</option>
-                      </select>
-                    </div>
-                    
-                    <div className="flex flex-col space-y-2">
-                      <label className="text-sm font-medium">Download Mode</label>
-                      <select className="h-10 rounded-md border border-input bg-background px-3 py-2 text-sm">
-                        <option>Translated Only</option>
-                        <option>Original + Translated</option>
-                        <option>All Subtitles</option>
-                      </select>
-                    </div>
-                  </div>
-                  
-                  <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-md text-sm flex items-center justify-center transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Download Subtitles
-                  </button>
-                </div>
+                <TranslationActions />
               </CardContent>
             </Card>
           </div>
