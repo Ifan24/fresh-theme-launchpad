@@ -14,12 +14,25 @@ import {
   TabsList,
   TabsTrigger
 } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
 
 const TranslationSettings = () => {
   const [tempValue, setTempValue] = useState(0.1);
+  const [activeSettingName, setActiveSettingName] = useState("Default");
   
   return (
     <div className="space-y-6">
+      {/* Active Setting Badge */}
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-sm font-medium">Translation Settings</h3>
+        <Badge 
+          variant="outline" 
+          className="bg-purple-100 text-purple-800 hover:bg-purple-200 border-purple-200"
+        >
+          {activeSettingName}
+        </Badge>
+      </div>
+      
       <Tabs defaultValue="basic" className="w-full">
         <TabsList className="grid grid-cols-2 mb-4">
           <TabsTrigger value="basic" className="text-sm">Basic Settings</TabsTrigger>
@@ -296,7 +309,15 @@ const TranslationSettings = () => {
           Apply Settings
         </button>
         <div className="flex gap-2">
-          <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors">
+          <button 
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors"
+            onClick={() => {
+              // In a real app, you would save the current settings here
+              // For demo purposes, we're just updating the name
+              const newName = prompt("Enter setting name:", activeSettingName);
+              if (newName) setActiveSettingName(newName);
+            }}
+          >
             Save Settings
           </button>
           <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm transition-colors">

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import SubtitlePreview from "@/components/subtitle/SubtitlePreview";
 import TranslationSettings from "@/components/subtitle/TranslationSettings";
@@ -10,6 +11,7 @@ import TranslationActions from "@/components/subtitle/TranslationActions";
 
 const SubtitleTranslator = () => {
   const [activeTab, setActiveTab] = useState("subtitles");
+  const [activeSettingName, setActiveSettingName] = useState("Default");
 
   // Mock data for demo purposes
   const mockSubtitles = [
@@ -65,7 +67,15 @@ const SubtitleTranslator = () => {
           <div className="lg:col-span-5">
             <Tabs defaultValue="settings" className="w-full">
               <TabsList className="w-full mb-4">
-                <TabsTrigger value="settings" className="flex-1">Translation Settings</TabsTrigger>
+                <TabsTrigger value="settings" className="flex-1 relative">
+                  Translation Settings
+                  <Badge 
+                    variant="outline" 
+                    className="ml-2 bg-purple-100 text-purple-800 border-purple-200 text-xs"
+                  >
+                    {activeSettingName}
+                  </Badge>
+                </TabsTrigger>
                 <TabsTrigger value="messages" className="flex-1">Messages & Cost</TabsTrigger>
               </TabsList>
               
