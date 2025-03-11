@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Subtitles } from "lucide-react";
+import { Subtitles, ExternalLink } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -69,6 +69,19 @@ const Navbar = () => {
         </nav>
         
         <div className="flex items-center space-x-4">
+          <a
+            href="https://lovable.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-md transition-all duration-200 ${
+              isDark 
+                ? "bg-white/10 hover:bg-white/20 text-white" 
+                : "bg-blue-600 hover:bg-blue-700 text-white"
+            }`}
+          >
+            <ExternalLink className="w-4 h-4" />
+            Project Page
+          </a>
           <ThemeToggle />
           <Link
             to="/login"
